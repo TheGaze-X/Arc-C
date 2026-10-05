@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C4E1EA9-4601-42FA-9AEE-5506ECB937BC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CriWare</RootNamespace>
+    <AssemblyName>CriMw.CriWare.Runtime</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.cs" />
+    <Compile Include="CriAtom.cs" />
+    <Compile Include="CriAtomConfig.cs" />
+    <Compile Include="CriAtomCueSheet.cs" />
+    <Compile Include="CriAtomDebugDetail\Utility.cs" />
+    <Compile Include="CriAtomEx.cs" />
+    <Compile Include="CriAtomEx3dListener.cs" />
+    <Compile Include="CriAtomEx3dRegion.cs" />
+    <Compile Include="CriAtomEx3dSource.cs" />
+    <Compile Include="CriAtomEx3dTransceiver.cs" />
+    <Compile Include="CriAtomExAcb.cs" />
+    <Compile Include="CriAtomExAcbDebug.cs" />
+    <Compile Include="CriAtomExAcbLoader.cs" />
+    <Compile Include="CriAtomExAcf.cs" />
+    <Compile Include="CriAtomExAcfDebug.cs" />
+    <Compile Include="CriAtomExAsr.cs" />
+    <Compile Include="CriAtomExAsrRack.cs" />
+    <Compile Include="CriAtomExAuxIn.cs" />
+    <Compile Include="CriAtomExBeatSync.cs" />
+    <Compile Include="CriAtomExCategory.cs" />
+    <Compile Include="CriAtomExDebug.cs" />
+    <Compile Include="CriAtomExLatencyEstimator.cs" />
+    <Compile Include="CriAtomExMic.cs" />
+    <Compile Include="CriAtomExOutputAnalyzer.cs" />
+    <Compile Include="CriAtomExOutputPort.cs" />
+    <Compile Include="CriAtomExPlayback.cs" />
+    <Compile Include="CriAtomExPlaybackDebug.cs" />
+    <Compile Include="CriAtomExPlayer.cs" />
+    <Compile Include="CriAtomExPlayerOutputAnalyzer.cs" />
+    <Compile Include="CriAtomExRawPcmVoicePool.cs" />
+    <Compile Include="CriAtomExSequencer.cs" />
+    <Compile Include="CriAtomExSoundObject.cs" />
+    <Compile Include="CriAtomExStandardVoicePool.cs" />
+    <Compile Include="CriAtomExTween.cs" />
+    <Compile Include="CriAtomExVoicePool.cs" />
+    <Compile Include="CriAtomExWaveVoicePool.cs" />
+    <Compile Include="CriAtomListener.cs" />
+    <Compile Include="CriAtomOutputDeviceObserver.cs" />
+    <Compile Include="CriAtomPlugin.cs" />
+    <Compile Include="CriAtomRegion.cs" />
+    <Compile Include="CriAtomServer.cs" />
+    <Compile Include="CriAtomSource.cs" />
+    <Compile Include="CriAtomSourceBase.cs" />
+    <Compile Include="CriAtomTransceiver.cs" />
+    <Compile Include="CriAudioReadStream.cs" />
+    <Compile Include="CriAudioWriteStream.cs" />
+    <Compile Include="CriDisposable.cs" />
+    <Compile Include="CriDisposableObjectManager.cs" />
+    <Compile Include="CriDurationMeasurementScope.cs" />
+    <Compile Include="CriErrorNotifier.cs" />
+    <Compile Include="CriFs.cs" />
+    <Compile Include="CriFsBinder.cs" />
+    <Compile Include="CriFsBindRequest.cs" />
+    <Compile Include="CriFsConfig.cs" />
+    <Compile Include="CriFsInstaller.cs" />
+    <Compile Include="CriFsInstallRequest.cs" />
+    <Compile Include="CriFsInstallRequestLegacy.cs" />
+    <Compile Include="CriFsLoadAssetBundleRequest.cs" />
+    <Compile Include="CriFsLoader.cs" />
+    <Compile Include="CriFsLoadFileRequest.cs" />
+    <Compile Include="CriFsPlugin.cs" />
+    <Compile Include="CriFsRequest.cs" />
+    <Compile Include="CriFsServer.cs" />
+    <Compile Include="CriFsUtility.cs" />
+    <Compile Include="CriFsWebInstaller.cs" />
+    <Compile Include="CriFsWebInstallRequest.cs" />
+    <Compile Include="CriManaAmbisonicSource.cs" />
+    <Compile Include="CriManaConfig.cs" />
+    <Compile Include="CriManaMovieController.cs" />
+    <Compile Include="CriManaMovieControllerForUI.cs" />
+    <Compile Include="CriManaMovieMaterial.cs" />
+    <Compile Include="CriManaMovieMaterialBase.cs" />
+    <Compile Include="CriManaMoviePlayerHolder.cs" />
+    <Compile Include="CriManaPlugin.cs" />
+    <Compile Include="CriMana\AlphaType.cs" />
+    <Compile Include="CriMana\AudioInfo.cs" />
+    <Compile Include="CriMana\CodecType.cs" />
+    <Compile Include="CriMana\Detail\AutoResisterRendererResourceFactories.cs" />
+    <Compile Include="CriMana\Detail\RendererResource.cs" />
+    <Compile Include="CriMana\Detail\RendererResourceFactory.cs" />
+    <Compile Include="CriMana\Detail\RendererResourceFactoryPriorityAttribute.cs" />
+    <Compile Include="CriMana\Detail\RendererResourceH264Yuv.cs" />
+    <Compile Include="CriMana\Detail\RendererResourceSofdecPrimeYuvRawData.cs" />
+    <Compile Include="CriMana\EventPoint.cs" />
+    <Compile Include="CriMana\FrameInfo.cs" />
+    <Compile Include="CriMana\MovieInfo.cs" />
+    <Compile Include="CriMana\Player.cs" />
+    <Compile Include="CriMana\Settings.cs" />
+    <Compile Include="CriMonoBehaviour.cs" />
+    <Compile Include="CriMonoBehaviourManager.cs" />
+    <Compile Include="CriStructMemory.cs" />
+    <Compile Include="CriTimeline\Atom\CriAtomBehaviour.cs" />
+    <Compile Include="CriTimeline\Atom\CriAtomClip.cs" />
+    <Compile Include="CriTimeline\Atom\CriAtomClipBase.cs" />
+    <Compile Include="CriTimeline\Atom\CriAtomClipPlayConfig.cs" />
+    <Compile Include="CriTimeline\Atom\CriAtomMixerBehaviour.cs" />
+    <Compile Include="CriTimeline\Atom\CriAtomTimelinePreviewer.cs" />
+    <Compile Include="CriTimeline\Atom\CriAtomTrack.cs" />
+    <Compile Include="CriTimeline\Mana\CriManaBehaviour.cs" />
+    <Compile Include="CriTimeline\Mana\CriManaClip.cs" />
+    <Compile Include="CriTimeline\Mana\CriManaClipBase.cs" />
+    <Compile Include="CriTimeline\Mana\CriManaMixerBehaviour.cs" />
+    <Compile Include="CriTimeline\Mana\CriManaTrack.cs" />
+    <Compile Include="CriWareDecrypter.cs" />
+    <Compile Include="CriWareErrorHandler.cs" />
+    <Compile Include="CriWareInitializer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Il2CppDummyDll\Il2CppDummyDll.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c7}</Project>
+      <Name>Il2CppDummyDll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c9}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c9}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937d4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unity.Timeline\Unity.Timeline.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937e6}</Project>
+      <Name>Unity.Timeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.AssetBundleModule\UnityEngine.AssetBundleModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937ea}</Project>
+      <Name>UnityEngine.AssetBundleModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.CoreModule\UnityEngine.CoreModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937ec}</Project>
+      <Name>UnityEngine.CoreModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.DirectorModule\UnityEngine.DirectorModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937ed}</Project>
+      <Name>UnityEngine.DirectorModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.UI\UnityEngine.UI.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb93801}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

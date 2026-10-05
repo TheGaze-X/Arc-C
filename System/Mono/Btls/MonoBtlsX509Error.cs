@@ -1,0 +1,200 @@
+﻿using System;
+using Il2CppDummyDll;
+
+namespace Mono.Btls
+{
+	// Token: 0x0200008F RID: 143
+	[Token(Token = "0x200008F")]
+	internal enum MonoBtlsX509Error
+	{
+		// Token: 0x0400014F RID: 335
+		[Token(Token = "0x400014F")]
+		OK,
+		// Token: 0x04000150 RID: 336
+		[Token(Token = "0x4000150")]
+		UNABLE_TO_GET_ISSUER_CERT = 2,
+		// Token: 0x04000151 RID: 337
+		[Token(Token = "0x4000151")]
+		UNABLE_TO_GET_CRL,
+		// Token: 0x04000152 RID: 338
+		[Token(Token = "0x4000152")]
+		UNABLE_TO_DECRYPT_CERT_SIGNATURE,
+		// Token: 0x04000153 RID: 339
+		[Token(Token = "0x4000153")]
+		UNABLE_TO_DECRYPT_CRL_SIGNATURE,
+		// Token: 0x04000154 RID: 340
+		[Token(Token = "0x4000154")]
+		UNABLE_TO_DECODE_ISSUER_PUBLIC_KEY,
+		// Token: 0x04000155 RID: 341
+		[Token(Token = "0x4000155")]
+		CERT_SIGNATURE_FAILURE,
+		// Token: 0x04000156 RID: 342
+		[Token(Token = "0x4000156")]
+		CRL_SIGNATURE_FAILURE,
+		// Token: 0x04000157 RID: 343
+		[Token(Token = "0x4000157")]
+		CERT_NOT_YET_VALID,
+		// Token: 0x04000158 RID: 344
+		[Token(Token = "0x4000158")]
+		CERT_HAS_EXPIRED,
+		// Token: 0x04000159 RID: 345
+		[Token(Token = "0x4000159")]
+		CRL_NOT_YET_VALID,
+		// Token: 0x0400015A RID: 346
+		[Token(Token = "0x400015A")]
+		CRL_HAS_EXPIRED,
+		// Token: 0x0400015B RID: 347
+		[Token(Token = "0x400015B")]
+		ERROR_IN_CERT_NOT_BEFORE_FIELD,
+		// Token: 0x0400015C RID: 348
+		[Token(Token = "0x400015C")]
+		ERROR_IN_CERT_NOT_AFTER_FIELD,
+		// Token: 0x0400015D RID: 349
+		[Token(Token = "0x400015D")]
+		ERROR_IN_CRL_LAST_UPDATE_FIELD,
+		// Token: 0x0400015E RID: 350
+		[Token(Token = "0x400015E")]
+		ERROR_IN_CRL_NEXT_UPDATE_FIELD,
+		// Token: 0x0400015F RID: 351
+		[Token(Token = "0x400015F")]
+		OUT_OF_MEM,
+		// Token: 0x04000160 RID: 352
+		[Token(Token = "0x4000160")]
+		DEPTH_ZERO_SELF_SIGNED_CERT,
+		// Token: 0x04000161 RID: 353
+		[Token(Token = "0x4000161")]
+		SELF_SIGNED_CERT_IN_CHAIN,
+		// Token: 0x04000162 RID: 354
+		[Token(Token = "0x4000162")]
+		UNABLE_TO_GET_ISSUER_CERT_LOCALLY,
+		// Token: 0x04000163 RID: 355
+		[Token(Token = "0x4000163")]
+		UNABLE_TO_VERIFY_LEAF_SIGNATURE,
+		// Token: 0x04000164 RID: 356
+		[Token(Token = "0x4000164")]
+		CERT_CHAIN_TOO_LONG,
+		// Token: 0x04000165 RID: 357
+		[Token(Token = "0x4000165")]
+		CERT_REVOKED,
+		// Token: 0x04000166 RID: 358
+		[Token(Token = "0x4000166")]
+		INVALID_CA,
+		// Token: 0x04000167 RID: 359
+		[Token(Token = "0x4000167")]
+		PATH_LENGTH_EXCEEDED,
+		// Token: 0x04000168 RID: 360
+		[Token(Token = "0x4000168")]
+		INVALID_PURPOSE,
+		// Token: 0x04000169 RID: 361
+		[Token(Token = "0x4000169")]
+		CERT_UNTRUSTED,
+		// Token: 0x0400016A RID: 362
+		[Token(Token = "0x400016A")]
+		CERT_REJECTED,
+		// Token: 0x0400016B RID: 363
+		[Token(Token = "0x400016B")]
+		SUBJECT_ISSUER_MISMATCH,
+		// Token: 0x0400016C RID: 364
+		[Token(Token = "0x400016C")]
+		AKID_SKID_MISMATCH,
+		// Token: 0x0400016D RID: 365
+		[Token(Token = "0x400016D")]
+		AKID_ISSUER_SERIAL_MISMATCH,
+		// Token: 0x0400016E RID: 366
+		[Token(Token = "0x400016E")]
+		KEYUSAGE_NO_CERTSIGN,
+		// Token: 0x0400016F RID: 367
+		[Token(Token = "0x400016F")]
+		UNABLE_TO_GET_CRL_ISSUER,
+		// Token: 0x04000170 RID: 368
+		[Token(Token = "0x4000170")]
+		UNHANDLED_CRITICAL_EXTENSION,
+		// Token: 0x04000171 RID: 369
+		[Token(Token = "0x4000171")]
+		KEYUSAGE_NO_CRL_SIGN,
+		// Token: 0x04000172 RID: 370
+		[Token(Token = "0x4000172")]
+		UNHANDLED_CRITICAL_CRL_EXTENSION,
+		// Token: 0x04000173 RID: 371
+		[Token(Token = "0x4000173")]
+		INVALID_NON_CA,
+		// Token: 0x04000174 RID: 372
+		[Token(Token = "0x4000174")]
+		PROXY_PATH_LENGTH_EXCEEDED,
+		// Token: 0x04000175 RID: 373
+		[Token(Token = "0x4000175")]
+		KEYUSAGE_NO_DIGITAL_SIGNATURE,
+		// Token: 0x04000176 RID: 374
+		[Token(Token = "0x4000176")]
+		PROXY_CERTIFICATES_NOT_ALLOWED,
+		// Token: 0x04000177 RID: 375
+		[Token(Token = "0x4000177")]
+		INVALID_EXTENSION,
+		// Token: 0x04000178 RID: 376
+		[Token(Token = "0x4000178")]
+		INVALID_POLICY_EXTENSION,
+		// Token: 0x04000179 RID: 377
+		[Token(Token = "0x4000179")]
+		NO_EXPLICIT_POLICY,
+		// Token: 0x0400017A RID: 378
+		[Token(Token = "0x400017A")]
+		DIFFERENT_CRL_SCOPE,
+		// Token: 0x0400017B RID: 379
+		[Token(Token = "0x400017B")]
+		UNSUPPORTED_EXTENSION_FEATURE,
+		// Token: 0x0400017C RID: 380
+		[Token(Token = "0x400017C")]
+		UNNESTED_RESOURCE,
+		// Token: 0x0400017D RID: 381
+		[Token(Token = "0x400017D")]
+		PERMITTED_VIOLATION,
+		// Token: 0x0400017E RID: 382
+		[Token(Token = "0x400017E")]
+		EXCLUDED_VIOLATION,
+		// Token: 0x0400017F RID: 383
+		[Token(Token = "0x400017F")]
+		SUBTREE_MINMAX,
+		// Token: 0x04000180 RID: 384
+		[Token(Token = "0x4000180")]
+		UNSUPPORTED_CONSTRAINT_TYPE = 51,
+		// Token: 0x04000181 RID: 385
+		[Token(Token = "0x4000181")]
+		UNSUPPORTED_CONSTRAINT_SYNTAX,
+		// Token: 0x04000182 RID: 386
+		[Token(Token = "0x4000182")]
+		UNSUPPORTED_NAME_SYNTAX,
+		// Token: 0x04000183 RID: 387
+		[Token(Token = "0x4000183")]
+		CRL_PATH_VALIDATION_ERROR,
+		// Token: 0x04000184 RID: 388
+		[Token(Token = "0x4000184")]
+		SUITE_B_INVALID_VERSION = 56,
+		// Token: 0x04000185 RID: 389
+		[Token(Token = "0x4000185")]
+		SUITE_B_INVALID_ALGORITHM,
+		// Token: 0x04000186 RID: 390
+		[Token(Token = "0x4000186")]
+		SUITE_B_INVALID_CURVE,
+		// Token: 0x04000187 RID: 391
+		[Token(Token = "0x4000187")]
+		SUITE_B_INVALID_SIGNATURE_ALGORITHM,
+		// Token: 0x04000188 RID: 392
+		[Token(Token = "0x4000188")]
+		SUITE_B_LOS_NOT_ALLOWED,
+		// Token: 0x04000189 RID: 393
+		[Token(Token = "0x4000189")]
+		SUITE_B_CANNOT_SIGN_P_384_WITH_P_256,
+		// Token: 0x0400018A RID: 394
+		[Token(Token = "0x400018A")]
+		HOSTNAME_MISMATCH,
+		// Token: 0x0400018B RID: 395
+		[Token(Token = "0x400018B")]
+		EMAIL_MISMATCH,
+		// Token: 0x0400018C RID: 396
+		[Token(Token = "0x400018C")]
+		IP_ADDRESS_MISMATCH,
+		// Token: 0x0400018D RID: 397
+		[Token(Token = "0x400018D")]
+		APPLICATION_VERIFICATION = 50
+	}
+}

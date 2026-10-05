@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C4E1EA9-4601-42FA-9AEE-5506ECB937BB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FlyingWormConsole3</RootNamespace>
+    <AssemblyName>ConsolePro</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConsoleProDebug.cs" />
+    <Compile Include="ConsoleProRemoteServer.cs" />
+    <Compile Include="LiteNetLib\BaseChannel.cs" />
+    <Compile Include="LiteNetLib\ConnectionRequest.cs" />
+    <Compile Include="LiteNetLib\ConnectionRequestResult.cs" />
+    <Compile Include="LiteNetLib\ConnectionState.cs" />
+    <Compile Include="LiteNetLib\ConnectRequestResult.cs" />
+    <Compile Include="LiteNetLib\DeliveryMethod.cs" />
+    <Compile Include="LiteNetLib\DisconnectInfo.cs" />
+    <Compile Include="LiteNetLib\DisconnectReason.cs" />
+    <Compile Include="LiteNetLib\DisconnectResult.cs" />
+    <Compile Include="LiteNetLib\EventBasedNatPunchListener.cs" />
+    <Compile Include="LiteNetLib\EventBasedNetListener.cs" />
+    <Compile Include="LiteNetLib\IDeliveryEventListener.cs" />
+    <Compile Include="LiteNetLib\INatPunchListener.cs" />
+    <Compile Include="LiteNetLib\INetEventListener.cs" />
+    <Compile Include="LiteNetLib\INetLogger.cs" />
+    <Compile Include="LiteNetLib\INtpEventListener.cs" />
+    <Compile Include="LiteNetLib\InvalidPacketException.cs" />
+    <Compile Include="LiteNetLib\IPv6Mode.cs" />
+    <Compile Include="LiteNetLib\Layers\Crc32cLayer.cs" />
+    <Compile Include="LiteNetLib\Layers\PacketLayerBase.cs" />
+    <Compile Include="LiteNetLib\Layers\XorEncryptLayer.cs" />
+    <Compile Include="LiteNetLib\LocalAddrType.cs" />
+    <Compile Include="LiteNetLib\NatAddressType.cs" />
+    <Compile Include="LiteNetLib\NatPunchModule.cs" />
+    <Compile Include="LiteNetLib\NetConnectAcceptPacket.cs" />
+    <Compile Include="LiteNetLib\NetConnectRequestPacket.cs" />
+    <Compile Include="LiteNetLib\NetConstants.cs" />
+    <Compile Include="LiteNetLib\NetDebug.cs" />
+    <Compile Include="LiteNetLib\NetEvent.cs" />
+    <Compile Include="LiteNetLib\NetLogLevel.cs" />
+    <Compile Include="LiteNetLib\NetManager.cs" />
+    <Compile Include="LiteNetLib\NetPacket.cs" />
+    <Compile Include="LiteNetLib\NetPacketPool.cs" />
+    <Compile Include="LiteNetLib\NetPacketReader.cs" />
+    <Compile Include="LiteNetLib\NetPeer.cs" />
+    <Compile Include="LiteNetLib\NetSocket.cs" />
+    <Compile Include="LiteNetLib\NetStatistics.cs" />
+    <Compile Include="LiteNetLib\NetUtils.cs" />
+    <Compile Include="LiteNetLib\PacketProperty.cs" />
+    <Compile Include="LiteNetLib\ReliableChannel.cs" />
+    <Compile Include="LiteNetLib\SequencedChannel.cs" />
+    <Compile Include="LiteNetLib\ShutdownResult.cs" />
+    <Compile Include="LiteNetLib\TooBigPacketException.cs" />
+    <Compile Include="LiteNetLib\UnconnectedMessageType.cs" />
+    <Compile Include="LiteNetLib\Utils\CRC32C.cs" />
+    <Compile Include="LiteNetLib\Utils\FastBitConverter.cs" />
+    <Compile Include="LiteNetLib\Utils\INetSerializable.cs" />
+    <Compile Include="LiteNetLib\Utils\InvalidTypeException.cs" />
+    <Compile Include="LiteNetLib\Utils\NetDataReader.cs" />
+    <Compile Include="LiteNetLib\Utils\NetDataWriter.cs" />
+    <Compile Include="LiteNetLib\Utils\NetPacketProcessor.cs" />
+    <Compile Include="LiteNetLib\Utils\NetSerializer.cs" />
+    <Compile Include="LiteNetLib\Utils\NtpLeapIndicator.cs" />
+    <Compile Include="LiteNetLib\Utils\NtpMode.cs" />
+    <Compile Include="LiteNetLib\Utils\NtpPacket.cs" />
+    <Compile Include="LiteNetLib\Utils\NtpRequest.cs" />
+    <Compile Include="LiteNetLib\Utils\ParseException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Il2CppDummyDll\Il2CppDummyDll.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c7}</Project>
+      <Name>Il2CppDummyDll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c9}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c9}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937d3}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937d4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.CoreModule\UnityEngine.CoreModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937ec}</Project>
+      <Name>UnityEngine.CoreModule</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

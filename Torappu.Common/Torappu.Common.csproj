@@ -1,0 +1,808 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C4E1EA9-4601-42FA-9AEE-5506ECB937DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Torappu.Common</RootNamespace>
+    <AssemblyName>Torappu.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DotNetExtensionMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Torappu\AbnormalCombo.cs" />
+    <Compile Include="Torappu\AbnormalFlag.cs" />
+    <Compile Include="Torappu\AndroidCPUInfoReader.cs" />
+    <Compile Include="Torappu\ArrayUtil.cs" />
+    <Compile Include="Torappu\AttributeType.cs" />
+    <Compile Include="Torappu\AudioExtensions.cs" />
+    <Compile Include="Torappu\AudioSoundType.cs" />
+    <Compile Include="Torappu\Audio\ChannelPlayStatus.cs" />
+    <Compile Include="Torappu\Audio\Engine\AssetMusicInfo.cs" />
+    <Compile Include="Torappu\Audio\Engine\AssetSoundInfo.cs" />
+    <Compile Include="Torappu\Audio\Engine\AudioAsset.cs" />
+    <Compile Include="Torappu\Audio\Engine\AudioAssetManager.cs" />
+    <Compile Include="Torappu\Audio\Engine\AudioAssetRefCollection.cs" />
+    <Compile Include="Torappu\Audio\Engine\AudioEngine.cs" />
+    <Compile Include="Torappu\Audio\Engine\AudioEngineType.cs" />
+    <Compile Include="Torappu\Audio\Engine\AudioParamValueTrans.cs" />
+    <Compile Include="Torappu\Audio\Engine\AudioPlayback.cs" />
+    <Compile Include="Torappu\Audio\Engine\FMOD\BankData.cs" />
+    <Compile Include="Torappu\Audio\Engine\FMOD\FMODData.cs" />
+    <Compile Include="Torappu\Audio\Engine\FMOD\MusicData.cs" />
+    <Compile Include="Torappu\Audio\Engine\FMOD\ParamData.cs" />
+    <Compile Include="Torappu\Audio\Engine\FMOD\SoundData.cs" />
+    <Compile Include="Torappu\Audio\Engine\FMOD\SoundMeta.cs" />
+    <Compile Include="Torappu\Audio\Engine\IAudioInfo.cs" />
+    <Compile Include="Torappu\Audio\Engine\IMusicInfo.cs" />
+    <Compile Include="Torappu\Audio\Engine\IPlayAudioParam.cs" />
+    <Compile Include="Torappu\Audio\Engine\ISoundInfo.cs" />
+    <Compile Include="Torappu\Audio\Engine\LoadAssetOptions.cs" />
+    <Compile Include="Torappu\Audio\Engine\MusicParam.cs" />
+    <Compile Include="Torappu\Audio\Engine\ParamValueHelper.cs" />
+    <Compile Include="Torappu\Audio\Engine\SnapshotTransition.cs" />
+    <Compile Include="Torappu\Audio\Engine\SoundParam.cs" />
+    <Compile Include="Torappu\Audio\MixerDesc.cs" />
+    <Compile Include="Torappu\Audio\UiBuildingSoundType.cs" />
+    <Compile Include="Torappu\Audio\UiEffectSoundType.cs" />
+    <Compile Include="Torappu\Audio\UiInternalSoundType.cs" />
+    <Compile Include="Torappu\AutoReleasableGroup.cs" />
+    <Compile Include="Torappu\BaseValueTypeList.cs" />
+    <Compile Include="Torappu\BattleFunctionDisableMask.cs" />
+    <Compile Include="Torappu\BattleRenderInvisibleMask.cs" />
+    <Compile Include="Torappu\BuildableType.cs" />
+    <Compile Include="Torappu\CallbackExtensions.cs" />
+    <Compile Include="Torappu\CharacterConst.cs" />
+    <Compile Include="Torappu\CharStarMarkState.cs" />
+    <Compile Include="Torappu\ClipboardParamSystem.cs" />
+    <Compile Include="Torappu\CollectionExtensions.cs" />
+    <Compile Include="Torappu\ColorExtensions.cs" />
+    <Compile Include="Torappu\CommonGameDataAccessor.cs" />
+    <Compile Include="Torappu\CompareType.cs" />
+    <Compile Include="Torappu\Config\ABTestInterface.cs" />
+    <Compile Include="Torappu\Config\ABTestKeys.cs" />
+    <Compile Include="Torappu\Config\DynConfigRequest.cs" />
+    <Compile Include="Torappu\Config\DynGameConfigUtils.cs" />
+    <Compile Include="Torappu\Config\GameUpdateRequestUtils.cs" />
+    <Compile Include="Torappu\Config\GetLatestGameRequest.cs" />
+    <Compile Include="Torappu\Config\IDynGameConfig.cs" />
+    <Compile Include="Torappu\Config\NetworkConfig.cs" />
+    <Compile Include="Torappu\Config\RemoteConfig.cs" />
+    <Compile Include="Torappu\Config\SingletonDynGameConfig.cs" />
+    <Compile Include="Torappu\Config\U8Config.cs" />
+    <Compile Include="Torappu\CoroutineManager.cs" />
+    <Compile Include="Torappu\CoroutineOnEnable.cs" />
+    <Compile Include="Torappu\DateTimeUtil.cs" />
+    <Compile Include="Torappu\DebugConsts.cs" />
+    <Compile Include="Torappu\DeviceInfoUtil.cs" />
+    <Compile Include="Torappu\DynamicBuildConditionType.cs" />
+    <Compile Include="Torappu\DynIllustGeometryUtils.cs" />
+    <Compile Include="Torappu\EnableStateWithKey.2.cs" />
+    <Compile Include="Torappu\EnableStateWithKey.cs" />
+    <Compile Include="Torappu\EncodeUtil.cs" />
+    <Compile Include="Torappu\EnumInfoCache.cs" />
+    <Compile Include="Torappu\EventPool.2.cs" />
+    <Compile Include="Torappu\EventPool.cs" />
+    <Compile Include="Torappu\EventPoolInternal\EventPoolBase.cs" />
+    <Compile Include="Torappu\EvolvePhase.cs" />
+    <Compile Include="Torappu\ExclusiveCoroutineHost.cs" />
+    <Compile Include="Torappu\ExclusiveSelectionGroup.cs" />
+    <Compile Include="Torappu\FastActionDetector.cs" />
+    <Compile Include="Torappu\FileExtensions.cs" />
+    <Compile Include="Torappu\FileUtil.cs" />
+    <Compile Include="Torappu\FlexibleValue.cs" />
+    <Compile Include="Torappu\FlexibleValueList.cs" />
+    <Compile Include="Torappu\FlexibleValueListMeta.cs" />
+    <Compile Include="Torappu\FlexibleValueMeta.cs" />
+    <Compile Include="Torappu\FlexibleValueType.cs" />
+    <Compile Include="Torappu\FP.cs" />
+    <Compile Include="Torappu\FuncVersion.cs" />
+    <Compile Include="Torappu\GameDayOfWeek.cs" />
+    <Compile Include="Torappu\GameFlowInterface.cs" />
+    <Compile Include="Torappu\GameInOutObserver.cs" />
+    <Compile Include="Torappu\GameObjectUtil.cs" />
+    <Compile Include="Torappu\GenericDictPool.cs" />
+    <Compile Include="Torappu\GenericHashSetPool.cs" />
+    <Compile Include="Torappu\GenericListPool.cs" />
+    <Compile Include="Torappu\GetComponentCache.cs" />
+    <Compile Include="Torappu\GlobalBusinessFlags.cs" />
+    <Compile Include="Torappu\GlobalConsts.cs" />
+    <Compile Include="Torappu\GlobalDefaults.cs" />
+    <Compile Include="Torappu\GlobalIcons.cs" />
+    <Compile Include="Torappu\GlobalOptions.cs" />
+    <Compile Include="Torappu\GlobalShaders.cs" />
+    <Compile Include="Torappu\GlobalTags.cs" />
+    <Compile Include="Torappu\GlobalTemp.cs" />
+    <Compile Include="Torappu\GraphicUtil.cs" />
+    <Compile Include="Torappu\GridLayoutOptions.cs" />
+    <Compile Include="Torappu\HandBookRank.cs" />
+    <Compile Include="Torappu\Heap.cs" />
+    <Compile Include="Torappu\HotfixIgnoreAttribute.cs" />
+    <Compile Include="Torappu\HotfixTestStub.cs" />
+    <Compile Include="Torappu\I18N\I18nUtils.cs" />
+    <Compile Include="Torappu\I18N\LocalizationDefines.cs" />
+    <Compile Include="Torappu\I18N\PatchRule.cs" />
+    <Compile Include="Torappu\ICSharpCallLua.cs" />
+    <Compile Include="Torappu\IDedupPool.cs" />
+    <Compile Include="Torappu\IFileFacade.cs" />
+    <Compile Include="Torappu\IFloatNotifyView.cs" />
+    <Compile Include="Torappu\IHotfixable.cs" />
+    <Compile Include="Torappu\IItemWithWeight.cs" />
+    <Compile Include="Torappu\IListDict.cs" />
+    <Compile Include="Torappu\ILuaCallCSharp.cs" />
+    <Compile Include="Torappu\InputSystemUtil.cs" />
+    <Compile Include="Torappu\InputUtil.cs" />
+    <Compile Include="Torappu\IntEventPool.cs" />
+    <Compile Include="Torappu\IntHashSet.cs" />
+    <Compile Include="Torappu\IOnPrefabUpdated.cs" />
+    <Compile Include="Torappu\IPCInputHelper.cs" />
+    <Compile Include="Torappu\IPlayerDataLink.cs" />
+    <Compile Include="Torappu\IPostGenerateGradleAndroidProject.cs" />
+    <Compile Include="Torappu\IRefCountedPoolItem.cs" />
+    <Compile Include="Torappu\ISafeAreaListener.cs" />
+    <Compile Include="Torappu\ISingletonMonoHost.cs" />
+    <Compile Include="Torappu\ISingletonNotAutoCreate.cs" />
+    <Compile Include="Torappu\ITickOwner.cs" />
+    <Compile Include="Torappu\IValueMsgReceiver.cs" />
+    <Compile Include="Torappu\JArrayWrapper.cs" />
+    <Compile Include="Torappu\JObjectWrapper.cs" />
+    <Compile Include="Torappu\KeyBoardVirtualButtonConfig.cs" />
+    <Compile Include="Torappu\LatchUtils.cs" />
+    <Compile Include="Torappu\LazySingleton.cs" />
+    <Compile Include="Torappu\LegacySortUtil.cs" />
+    <Compile Include="Torappu\LifeType.cs" />
+    <Compile Include="Torappu\LineAlignment.cs" />
+    <Compile Include="Torappu\LineBuilder.cs" />
+    <Compile Include="Torappu\LineBuilderData.cs" />
+    <Compile Include="Torappu\ListDict.cs" />
+    <Compile Include="Torappu\ListSet.cs" />
+    <Compile Include="Torappu\LogChannel.cs" />
+    <Compile Include="Torappu\LogColorTag.cs" />
+    <Compile Include="Torappu\LogDefine.cs" />
+    <Compile Include="Torappu\Log\DLogPreference.cs" />
+    <Compile Include="Torappu\LongHashSet.cs" />
+    <Compile Include="Torappu\Lua\ILuaEnv.cs" />
+    <Compile Include="Torappu\Lua\LuaScriptLoaderUtil.cs" />
+    <Compile Include="Torappu\MapLayer.cs" />
+    <Compile Include="Torappu\MathUtil.cs" />
+    <Compile Include="Torappu\MatrixExtensions.cs" />
+    <Compile Include="Torappu\Misc.cs" />
+    <Compile Include="Torappu\MixedID.cs" />
+    <Compile Include="Torappu\MotionMask.cs" />
+    <Compile Include="Torappu\MotionMode.cs" />
+    <Compile Include="Torappu\Network\BinaryData.cs" />
+    <Compile Include="Torappu\Network\Certificate\CertificateHandlerFactory.cs" />
+    <Compile Include="Torappu\Network\Certificate\TorappuInlandCertValidator.cs" />
+    <Compile Include="Torappu\Network\DownloadFileTask.cs" />
+    <Compile Include="Torappu\Network\DownloadHandlerFile.cs" />
+    <Compile Include="Torappu\Network\FileDownloader.cs" />
+    <Compile Include="Torappu\Network\ICustomizedBundleData.cs" />
+    <Compile Include="Torappu\Network\IMsgBundle.cs" />
+    <Compile Include="Torappu\Network\IMsgBundleWithPopulation.cs" />
+    <Compile Include="Torappu\Network\MockMeta.cs" />
+    <Compile Include="Torappu\Network\MsgBundle.cs" />
+    <Compile Include="Torappu\Network\NetworkConfigPriority.cs" />
+    <Compile Include="Torappu\Network\Networker.cs" />
+    <Compile Include="Torappu\Network\NetworkOptions.cs" />
+    <Compile Include="Torappu\Network\NetworkRouterConfig.cs" />
+    <Compile Include="Torappu\Network\NetworkSecurity.cs" />
+    <Compile Include="Torappu\Network\Request.cs" />
+    <Compile Include="Torappu\Network\RequestResult.cs" />
+    <Compile Include="Torappu\Network\RespMsgBundle.cs" />
+    <Compile Include="Torappu\Network\Response.cs" />
+    <Compile Include="Torappu\Network\ResponseError.cs" />
+    <Compile Include="Torappu\Network\ResponseStatus.cs" />
+    <Compile Include="Torappu\Network\UrlConfiguration.cs" />
+    <Compile Include="Torappu\Network\WebHttpInstruction.cs" />
+    <Compile Include="Torappu\Network\WebHttpResponse.cs" />
+    <Compile Include="Torappu\Network\WebHttpResult.cs" />
+    <Compile Include="Torappu\Notification\NotificationFloatLayouter.cs" />
+    <Compile Include="Torappu\Notification\NotifyView.cs" />
+    <Compile Include="Torappu\Notification\NotifyViewHost.cs" />
+    <Compile Include="Torappu\Notification\NotifyViewLayouter.cs" />
+    <Compile Include="Torappu\NotifyViewOptions.cs" />
+    <Compile Include="Torappu\NotifyViewParam.cs" />
+    <Compile Include="Torappu\NotifyViewPriority.cs" />
+    <Compile Include="Torappu\NumberHashSet.cs" />
+    <Compile Include="Torappu\ObjectExtensions.cs" />
+    <Compile Include="Torappu\ObscuredFP.cs" />
+    <Compile Include="Torappu\OneFrameCache.cs" />
+    <Compile Include="Torappu\Optimize\Consts.cs" />
+    <Compile Include="Torappu\Particle\ParticleArray.cs" />
+    <Compile Include="Torappu\Particle\ParticleConsts.cs" />
+    <Compile Include="Torappu\Particle\ParticleGeometryUtils.cs" />
+    <Compile Include="Torappu\Particle\ParticleSystemExtensions.cs" />
+    <Compile Include="Torappu\PathUtil.cs" />
+    <Compile Include="Torappu\PersistentFileStorage.cs" />
+    <Compile Include="Torappu\PersistentSingleton.cs" />
+    <Compile Include="Torappu\PlatformKey.cs" />
+    <Compile Include="Torappu\PlayerBattleRank.cs" />
+    <Compile Include="Torappu\PlayerPrefKeys.cs" />
+    <Compile Include="Torappu\PlayerPrefsWrapper.cs" />
+    <Compile Include="Torappu\PlayerRoomSlotState.cs" />
+    <Compile Include="Torappu\PlayerRoomState.cs" />
+    <Compile Include="Torappu\PlayerSide.cs" />
+    <Compile Include="Torappu\PlayerSideCategories.cs" />
+    <Compile Include="Torappu\PlayerSideEquality.cs" />
+    <Compile Include="Torappu\PlayerSideMask.cs" />
+    <Compile Include="Torappu\PlayerStageState.cs" />
+    <Compile Include="Torappu\ProfessionCategories.cs" />
+    <Compile Include="Torappu\ProfessionCategory.cs" />
+    <Compile Include="Torappu\ProfessionID.cs" />
+    <Compile Include="Torappu\RandomFactory.cs" />
+    <Compile Include="Torappu\RandomUtil.cs" />
+    <Compile Include="Torappu\RangeIdUsage.cs" />
+    <Compile Include="Torappu\RangeIdUsageIndex.cs" />
+    <Compile Include="Torappu\RarityRank.cs" />
+    <Compile Include="Torappu\RarityRankMask.cs" />
+    <Compile Include="Torappu\RecruitBuildSlotState.cs" />
+    <Compile Include="Torappu\RefCountCallback.cs" />
+    <Compile Include="Torappu\RefCountedPool.cs" />
+    <Compile Include="Torappu\RefCountedPoolItem.cs" />
+    <Compile Include="Torappu\Reflection\DictReflectionInfo.cs" />
+    <Compile Include="Torappu\ReflectMethodAttribute.cs" />
+    <Compile Include="Torappu\RefTuple.2.cs" />
+    <Compile Include="Torappu\RefTuple.3.cs" />
+    <Compile Include="Torappu\RefTuple.4.cs" />
+    <Compile Include="Torappu\RefTuple.cs" />
+    <Compile Include="Torappu\Resource\AbstractAssetLoader.cs" />
+    <Compile Include="Torappu\Resource\AssetInfoMemoInScene.cs" />
+    <Compile Include="Torappu\Resource\AsyncComponent.cs" />
+    <Compile Include="Torappu\Resource\AsyncResource.cs" />
+    <Compile Include="Torappu\Resource\BaseAssetLoader.cs" />
+    <Compile Include="Torappu\Resource\CachedAssetLoader.cs" />
+    <Compile Include="Torappu\Resource\DirectAssetLoader.cs" />
+    <Compile Include="Torappu\Resource\ILocalResourceEvents.cs" />
+    <Compile Include="Torappu\Resource\IResLangProvider.cs" />
+    <Compile Include="Torappu\Resource\IResourceListener.cs" />
+    <Compile Include="Torappu\Resource\IResourceManager.cs" />
+    <Compile Include="Torappu\Resource\RawResManager.cs" />
+    <Compile Include="Torappu\Resource\ResLifetimeCategory.cs" />
+    <Compile Include="Torappu\Resource\ResLifetimeState.cs" />
+    <Compile Include="Torappu\Resource\ResourceConsts.cs" />
+    <Compile Include="Torappu\Resource\ResourceManager.cs" />
+    <Compile Include="Torappu\Resource\ResourceOptions.cs" />
+    <Compile Include="Torappu\RoundingMode.cs" />
+    <Compile Include="Torappu\RuntimePaths.cs" />
+    <Compile Include="Torappu\RuntimeReflectionUtils.cs" />
+    <Compile Include="Torappu\SafeAreaController.cs" />
+    <Compile Include="Torappu\SafeArea\Core\SafeAreaImpl.cs" />
+    <Compile Include="Torappu\SafeRect.cs" />
+    <Compile Include="Torappu\ScaledStopwatch.cs" />
+    <Compile Include="Torappu\SceneConsts.cs" />
+    <Compile Include="Torappu\ScopedSingleton.2.cs" />
+    <Compile Include="Torappu\ScopedSingleton.cs" />
+    <Compile Include="Torappu\ScrollUtil.cs" />
+    <Compile Include="Torappu\SDKType.cs" />
+    <Compile Include="Torappu\SDK\AccountUtils.cs" />
+    <Compile Include="Torappu\SDK\AntiData\ACEAntiDataSDK.cs" />
+    <Compile Include="Torappu\SDK\AntiData\EmptyAntiDataSDK.cs" />
+    <Compile Include="Torappu\SDK\AntiData\ServiceAntiDataSDK.cs" />
+    <Compile Include="Torappu\SDK\HGGameUpdateInterface.cs" />
+    <Compile Include="Torappu\SDK\HGLatestGameInfo.cs" />
+    <Compile Include="Torappu\SDK\HGUpdateConfig.cs" />
+    <Compile Include="Torappu\SDK\IGameUpdateInterface.cs" />
+    <Compile Include="Torappu\SDK\SDKConsts.cs" />
+    <Compile Include="Torappu\SDK\SDKHelper.cs" />
+    <Compile Include="Torappu\SDK\ServiceMetaSDK.cs" />
+    <Compile Include="Torappu\SharedConsts.cs" />
+    <Compile Include="Torappu\SharedFormatUtil.cs" />
+    <Compile Include="Torappu\Singleton.cs" />
+    <Compile Include="Torappu\SingletonInScene.cs" />
+    <Compile Include="Torappu\SingletonLoginScoped.cs" />
+    <Compile Include="Torappu\SingletonMonoBehaviour.cs" />
+    <Compile Include="Torappu\SingletonScopes.cs" />
+    <Compile Include="Torappu\SingletonScriptableObject.cs" />
+    <Compile Include="Torappu\SingletonUtils.cs" />
+    <Compile Include="Torappu\SingletonWithMonoHost.cs" />
+    <Compile Include="Torappu\SingletonWithMonoHostInitializer.cs" />
+    <Compile Include="Torappu\SkillDurationType.cs" />
+    <Compile Include="Torappu\SkillType.cs" />
+    <Compile Include="Torappu\SortingLayers.cs" />
+    <Compile Include="Torappu\SourceApplyWay.cs" />
+    <Compile Include="Torappu\SpType.cs" />
+    <Compile Include="Torappu\SpTypeIndex.cs" />
+    <Compile Include="Torappu\StringBuilderPool.cs" />
+    <Compile Include="Torappu\StringDedupEntry.cs" />
+    <Compile Include="Torappu\StringDedupPool.cs" />
+    <Compile Include="Torappu\StringExtensions.cs" />
+    <Compile Include="Torappu\StringUtil.cs" />
+    <Compile Include="Torappu\StructWrapper.cs" />
+    <Compile Include="Torappu\ThreadSafeQueue.cs" />
+    <Compile Include="Torappu\TickFunction.cs" />
+    <Compile Include="Torappu\TickFunctionTimer.cs" />
+    <Compile Include="Torappu\TickGroupType.cs" />
+    <Compile Include="Torappu\TickYieldInstruction.cs" />
+    <Compile Include="Torappu\TimelineBindingHandler.cs" />
+    <Compile Include="Torappu\TimeManager.cs" />
+    <Compile Include="Torappu\TimeModule\TickGroup.cs" />
+    <Compile Include="Torappu\TimeModule\TimerGroup.cs" />
+    <Compile Include="Torappu\TimerRef.cs" />
+    <Compile Include="Torappu\TimerStatus.cs" />
+    <Compile Include="Torappu\TimeTransiting.cs" />
+    <Compile Include="Torappu\TorappuInputModule.cs" />
+    <Compile Include="Torappu\TrailContext.cs" />
+    <Compile Include="Torappu\TSMath.cs" />
+    <Compile Include="Torappu\TSMatrix.cs" />
+    <Compile Include="Torappu\TSQuaternion.cs" />
+    <Compile Include="Torappu\TSRandom.cs" />
+    <Compile Include="Torappu\TSVector2.cs" />
+    <Compile Include="Torappu\TSVector3.cs" />
+    <Compile Include="Torappu\UICanvasScalerHandlerSingleton.cs" />
+    <Compile Include="Torappu\UIUtil.cs" />
+    <Compile Include="Torappu\UI\AsyncImageRenderer.cs" />
+    <Compile Include="Torappu\UI\DelaySwitchTween.cs" />
+    <Compile Include="Torappu\UI\DelayTweenHandler.cs" />
+    <Compile Include="Torappu\UI\DynTargetTween\CanvasGroupAlphaTweener.cs" />
+    <Compile Include="Torappu\UI\DynTargetTween\DynTargetSwitchTween.2.cs" />
+    <Compile Include="Torappu\UI\DynTargetTween\DynTargetSwitchTween.3.cs" />
+    <Compile Include="Torappu\UI\DynTargetTween\DynTargetSwitchTween.cs" />
+    <Compile Include="Torappu\UI\DynTargetTween\DynTargetTweener.cs" />
+    <Compile Include="Torappu\UI\DynTargetTween\ICanvasTarget.cs" />
+    <Compile Include="Torappu\UI\DynTargetTween\IRectTransformTarget.cs" />
+    <Compile Include="Torappu\UI\FadeSwitchTween.cs" />
+    <Compile Include="Torappu\UI\FadeTranslationSwitchTween.cs" />
+    <Compile Include="Torappu\UI\ILoadAsset.cs" />
+    <Compile Include="Torappu\UI\ITwoStateSwitcher.cs" />
+    <Compile Include="Torappu\UI\IUIButtonLink.cs" />
+    <Compile Include="Torappu\UI\IWillRenderCanvasTask.cs" />
+    <Compile Include="Torappu\UI\KeyBoardVirtualButtonEnum.cs" />
+    <Compile Include="Torappu\UI\OverrideStandaloneCanvasScalerInfo.cs" />
+    <Compile Include="Torappu\UI\RuntimeAtlasFacade.cs" />
+    <Compile Include="Torappu\UI\RuntimeAtlasManager.cs" />
+    <Compile Include="Torappu\UI\TargetPosCalculator.cs" />
+    <Compile Include="Torappu\UI\TweenUtils.cs" />
+    <Compile Include="Torappu\UI\TwoPhaseButtonWidget.cs" />
+    <Compile Include="Torappu\UI\UIAbstractMatAnimWrapper.cs" />
+    <Compile Include="Torappu\UI\UIButton.cs" />
+    <Compile Include="Torappu\UI\UIButtonKeyBoardConfig.cs" />
+    <Compile Include="Torappu\UI\UIButtonUtil.cs" />
+    <Compile Include="Torappu\UI\UICanvasScalerAspects.cs" />
+    <Compile Include="Torappu\UI\UIClickOutsideHandler.cs" />
+    <Compile Include="Torappu\UI\UIImageAspects.cs" />
+    <Compile Include="Torappu\UI\UIMatAnimHolder.cs" />
+    <Compile Include="Torappu\UI\UINotificationInterface.cs" />
+    <Compile Include="Torappu\UI\UIParticle.cs" />
+    <Compile Include="Torappu\UI\UIParticleAttractor.cs" />
+    <Compile Include="Torappu\UI\UIParticleMatAnimWrapper.cs" />
+    <Compile Include="Torappu\UI\UIParticleRenderer.cs" />
+    <Compile Include="Torappu\UI\UIParticleUpdater.cs" />
+    <Compile Include="Torappu\UI\UIRawImageMatAnimWrapper.cs" />
+    <Compile Include="Torappu\UI\UIScrollAspects.cs" />
+    <Compile Include="Torappu\UI\UISingletonInputController.cs" />
+    <Compile Include="Torappu\UI\UISwitchTween.cs" />
+    <Compile Include="Torappu\UI\UITextAspects.cs" />
+    <Compile Include="Torappu\UI\UIWebScheme.cs" />
+    <Compile Include="Torappu\UI\WebTextureLoader.cs" />
+    <Compile Include="Torappu\UI\WillRenderCanvasManager.cs" />
+    <Compile Include="Torappu\UI\WillRenderCanvasTask.cs" />
+    <Compile Include="Torappu\UnitType.cs" />
+    <Compile Include="Torappu\UnitTypeMask.cs" />
+    <Compile Include="Torappu\UnityCrossVersionFacade.cs" />
+    <Compile Include="Torappu\UnityExtensions.cs" />
+    <Compile Include="Torappu\ValueBundle.cs" />
+    <Compile Include="Torappu\ValueTypeList.cs" />
+    <Compile Include="Torappu\ValueTypeListExtensions.cs" />
+    <Compile Include="Torappu\VectorExtensions.cs" />
+    <Compile Include="Torappu\VersionCompat.cs" />
+    <Compile Include="Torappu\Video\AbstractMediaPlayerHolder.cs" />
+    <Compile Include="Torappu\WaitForAsyncTask.cs" />
+    <Compile Include="Torappu\WaitForStartCoroutine.cs" />
+    <Compile Include="Torappu\WaitWhile.cs" />
+    <Compile Include="Torappu\WaitWhileForSeconds.cs" />
+    <Compile Include="Torappu\XORShiftRandom.cs" />
+    <Compile Include="Torappu\YieldSemaphore.cs" />
+    <Compile Include="Torappu\ZipUtils.cs" />
+    <Compile Include="UnityEngine\DLog.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate0.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate1.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate10.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate100.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate101.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate102.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate103.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate104.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate105.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate106.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate107.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate108.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate109.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate11.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate110.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate111.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate112.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate113.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate114.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate115.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate116.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate117.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate118.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate119.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate12.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate120.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate121.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate122.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate123.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate124.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate125.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate126.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate127.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate128.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate129.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate13.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate130.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate131.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate132.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate133.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate134.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate135.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate136.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate137.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate138.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate139.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate14.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate140.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate141.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate142.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate143.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate144.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate145.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate146.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate147.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate148.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate149.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate15.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate150.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate151.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate152.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate153.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate154.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate155.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate156.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate157.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate158.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate159.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate16.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate160.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate161.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate162.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate163.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate164.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate165.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate166.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate167.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate168.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate169.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate17.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate170.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate171.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate172.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate173.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate174.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate175.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate176.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate177.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate178.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate179.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate18.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate180.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate181.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate182.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate183.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate184.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate185.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate186.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate187.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate188.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate189.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate19.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate190.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate191.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate192.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate193.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate194.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate195.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate196.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate197.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate198.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate199.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate2.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate20.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate200.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate201.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate202.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate203.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate204.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate205.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate206.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate207.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate208.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate209.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate21.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate210.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate211.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate212.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate213.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate214.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate215.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate216.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate217.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate218.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate219.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate22.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate220.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate221.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate222.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate223.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate224.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate225.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate226.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate227.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate228.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate229.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate23.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate230.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate231.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate232.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate233.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate234.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate235.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate236.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate237.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate238.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate239.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate24.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate240.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate241.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate242.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate243.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate244.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate245.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate246.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate247.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate248.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate249.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate25.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate250.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate251.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate252.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate253.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate254.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate255.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate256.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate257.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate258.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate259.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate26.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate260.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate261.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate262.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate263.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate264.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate265.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate266.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate267.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate268.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate269.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate27.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate270.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate271.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate272.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate273.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate274.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate275.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate276.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate277.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate278.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate279.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate28.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate280.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate281.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate282.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate283.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate284.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate285.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate286.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate287.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate288.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate29.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate3.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate30.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate31.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate32.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate33.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate34.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate35.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate36.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate37.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate38.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate39.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate4.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate40.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate41.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate42.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate43.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate44.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate45.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate46.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate47.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate48.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate49.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate5.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate50.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate51.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate52.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate53.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate54.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate55.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate56.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate57.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate58.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate59.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate6.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate60.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate61.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate62.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate63.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate64.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate65.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate66.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate67.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate68.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate69.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate7.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate70.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate71.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate72.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate73.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate74.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate75.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate76.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate77.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate78.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate79.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate8.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate80.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate81.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate82.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate83.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate84.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate85.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate86.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate87.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate88.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate89.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate9.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate90.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate91.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate92.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate93.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate94.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate95.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate96.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate97.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate98.cs" />
+    <Compile Include="XLua\__XLua_Gen_Delegate99.cs" />
+    <Compile Include="__XLUA_GEN\__XLUA_GEN_FLAG.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DOTween\DOTween.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937be}</Project>
+      <Name>DOTween</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hypergryph.GameUpdate\Hypergryph.GameUpdate.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c2}</Project>
+      <Name>Hypergryph.GameUpdate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hypergryph.Log\Hypergryph.Log.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c3}</Project>
+      <Name>Hypergryph.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Il2CppDummyDll\Il2CppDummyDll.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c7}</Project>
+      <Name>Il2CppDummyDll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c9}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c9}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Newtonsoft.Json\Newtonsoft.Json.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937ca}</Project>
+      <Name>Newtonsoft.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937d3}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937d4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ThirdPartyAssembly\ThirdPartyAssembly.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937da}</Project>
+      <Name>ThirdPartyAssembly</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unity.InputSystem\Unity.InputSystem.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937e1}</Project>
+      <Name>Unity.InputSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unity.Timeline\Unity.Timeline.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937e6}</Project>
+      <Name>Unity.Timeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.AnimationModule\UnityEngine.AnimationModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937e9}</Project>
+      <Name>UnityEngine.AnimationModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.AssetBundleModule\UnityEngine.AssetBundleModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937ea}</Project>
+      <Name>UnityEngine.AssetBundleModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.AudioModule\UnityEngine.AudioModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937eb}</Project>
+      <Name>UnityEngine.AudioModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.CoreModule\UnityEngine.CoreModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937ec}</Project>
+      <Name>UnityEngine.CoreModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.DirectorModule\UnityEngine.DirectorModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937ed}</Project>
+      <Name>UnityEngine.DirectorModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.ParticleSystemModule\UnityEngine.ParticleSystemModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937f5}</Project>
+      <Name>UnityEngine.ParticleSystemModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.Physics2DModule\UnityEngine.Physics2DModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937f6}</Project>
+      <Name>UnityEngine.Physics2DModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.UIModule\UnityEngine.UIModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb93804}</Project>
+      <Name>UnityEngine.UIModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.UI\UnityEngine.UI.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb93801}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.UnityWebRequestModule\UnityEngine.UnityWebRequestModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb93806}</Project>
+      <Name>UnityEngine.UnityWebRequestModule</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

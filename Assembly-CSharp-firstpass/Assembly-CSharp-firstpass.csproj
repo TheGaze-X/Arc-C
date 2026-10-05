@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C4E1EA9-4601-42FA-9AEE-5506ECB937B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Assembly-CSharp-firstpass</RootNamespace>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancedInspector\ActionBinding.cs" />
+    <Compile Include="AdvancedInspector\ActionEventHandler.cs" />
+    <Compile Include="AdvancedInspector\AdvancedInspectorAttribute.cs" />
+    <Compile Include="AdvancedInspector\AdvancedInspectorForceRefresh.cs" />
+    <Compile Include="AdvancedInspector\AIStateMachineBehaviour.cs" />
+    <Compile Include="AdvancedInspector\AngleAttribute.cs" />
+    <Compile Include="AdvancedInspector\BackgroundAttribute.cs" />
+    <Compile Include="AdvancedInspector\BoolEventHandler.cs" />
+    <Compile Include="AdvancedInspector\BypassAttribute.cs" />
+    <Compile Include="AdvancedInspector\CollectionAttribute.cs" />
+    <Compile Include="AdvancedInspector\CollectionDisplay.cs" />
+    <Compile Include="AdvancedInspector\ColliderEventHandler.cs" />
+    <Compile Include="AdvancedInspector\CollisionEventHandler.cs" />
+    <Compile Include="AdvancedInspector\ComponentMonoBehaviour.cs" />
+    <Compile Include="AdvancedInspector\ConstructorAttribute.cs" />
+    <Compile Include="AdvancedInspector\CoroutineMonoBehaviour.cs" />
+    <Compile Include="AdvancedInspector\CreateDerivedAttribute.cs" />
+    <Compile Include="AdvancedInspector\Description.cs" />
+    <Compile Include="AdvancedInspector\DescriptionPair.cs" />
+    <Compile Include="AdvancedInspector\DescriptorAttribute.cs" />
+    <Compile Include="AdvancedInspector\DisplayAsParentAttribute.cs" />
+    <Compile Include="AdvancedInspector\DontAllowSceneObjectAttribute.cs" />
+    <Compile Include="AdvancedInspector\EnumAttribute.cs" />
+    <Compile Include="AdvancedInspector\EnumDisplay.cs" />
+    <Compile Include="AdvancedInspector\ExpandableAttribute.cs" />
+    <Compile Include="AdvancedInspector\FieldAttribute.cs" />
+    <Compile Include="AdvancedInspector\FieldEditorAttribute.cs" />
+    <Compile Include="AdvancedInspector\FloatEventHandler.cs" />
+    <Compile Include="AdvancedInspector\GenericEventHandler.cs" />
+    <Compile Include="AdvancedInspector\GroupAttribute.cs" />
+    <Compile Include="AdvancedInspector\HelpAttribute.cs" />
+    <Compile Include="AdvancedInspector\HelpItem.cs" />
+    <Compile Include="AdvancedInspector\HelpPosition.cs" />
+    <Compile Include="AdvancedInspector\HelpType.cs" />
+    <Compile Include="AdvancedInspector\IconPreviewSize.cs" />
+    <Compile Include="AdvancedInspector\ICopiable.cs" />
+    <Compile Include="AdvancedInspector\ICopy.cs" />
+    <Compile Include="AdvancedInspector\IDataChanged.cs" />
+    <Compile Include="AdvancedInspector\IDescriptor.cs" />
+    <Compile Include="AdvancedInspector\IExpandable.cs" />
+    <Compile Include="AdvancedInspector\IgnoreBase.cs" />
+    <Compile Include="AdvancedInspector\IHelp.cs" />
+    <Compile Include="AdvancedInspector\IInspect.cs" />
+    <Compile Include="AdvancedInspector\IInspectorRunning.cs" />
+    <Compile Include="AdvancedInspector\IListAttribute.cs" />
+    <Compile Include="AdvancedInspector\IMenu.cs" />
+    <Compile Include="AdvancedInspector\InspectAttribute.cs" />
+    <Compile Include="AdvancedInspector\InspectorLevel.cs" />
+    <Compile Include="AdvancedInspector\IntEventHandler.cs" />
+    <Compile Include="AdvancedInspector\IPicker.cs" />
+    <Compile Include="AdvancedInspector\IPreview.cs" />
+    <Compile Include="AdvancedInspector\IReadOnly.cs" />
+    <Compile Include="AdvancedInspector\IRestrict.cs" />
+    <Compile Include="AdvancedInspector\IRuntimeAttribute.2.cs" />
+    <Compile Include="AdvancedInspector\IRuntimeAttribute.cs" />
+    <Compile Include="AdvancedInspector\IRuntimeType.cs" />
+    <Compile Include="AdvancedInspector\ISpacing.cs" />
+    <Compile Include="AdvancedInspector\IVisibility.cs" />
+    <Compile Include="AdvancedInspector\MenuAttribute.cs" />
+    <Compile Include="AdvancedInspector\MethodAttribute.cs" />
+    <Compile Include="AdvancedInspector\MethodDisplay.cs" />
+    <Compile Include="AdvancedInspector\NoPicker.cs" />
+    <Compile Include="AdvancedInspector\ObjectEventHandler.cs" />
+    <Compile Include="AdvancedInspector\RangeFloat.cs" />
+    <Compile Include="AdvancedInspector\RangeInt.cs" />
+    <Compile Include="AdvancedInspector\RangeValueAttribute.cs" />
+    <Compile Include="AdvancedInspector\ReadOnlyAttribute.cs" />
+    <Compile Include="AdvancedInspector\RestrictAttribute.cs" />
+    <Compile Include="AdvancedInspector\RestrictDisplay.cs" />
+    <Compile Include="AdvancedInspector\RuntimeResolveAttribute.cs" />
+    <Compile Include="AdvancedInspector\ScriptableComponent.cs" />
+    <Compile Include="AdvancedInspector\SenderEventHandler.cs" />
+    <Compile Include="AdvancedInspector\SpacingAttribute.cs" />
+    <Compile Include="AdvancedInspector\StringEventHandler.cs" />
+    <Compile Include="AdvancedInspector\StyleAttribute.cs" />
+    <Compile Include="AdvancedInspector\TabAttribute.cs" />
+    <Compile Include="AdvancedInspector\TextFieldAttribute.cs" />
+    <Compile Include="AdvancedInspector\TextFieldType.cs" />
+    <Compile Include="AdvancedInspector\TitleAttribute.cs" />
+    <Compile Include="AdvancedInspector\ToolbarAttribute.cs" />
+    <Compile Include="AdvancedInspector\TypeUtility.cs" />
+    <Compile Include="AdvancedInspector\UDictionary.cs" />
+    <Compile Include="AdvancedInspector\Vector2EventHandler.cs" />
+    <Compile Include="AdvancedInspector\Vector3EventHandler.cs" />
+    <Compile Include="AdvancedInspector\Vector4EventHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YoStar\SDK\YoStarSDK.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Assembly-CSharp\Assembly-CSharp.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937ba}</Project>
+      <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Il2CppDummyDll\Il2CppDummyDll.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c7}</Project>
+      <Name>Il2CppDummyDll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c9}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c9}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Torappu.Common\Torappu.Common.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937dc}</Project>
+      <Name>Torappu.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.AnimationModule\UnityEngine.AnimationModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937e9}</Project>
+      <Name>UnityEngine.AnimationModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.CoreModule\UnityEngine.CoreModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937ec}</Project>
+      <Name>UnityEngine.CoreModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.PhysicsModule\UnityEngine.PhysicsModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937f7}</Project>
+      <Name>UnityEngine.PhysicsModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.TextRenderingModule\UnityEngine.TextRenderingModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937ff}</Project>
+      <Name>UnityEngine.TextRenderingModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YoStarSDK\YoStarSDK.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb93811}</Project>
+      <Name>YoStarSDK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

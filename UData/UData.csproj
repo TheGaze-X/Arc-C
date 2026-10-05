@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C4E1EA9-4601-42FA-9AEE-5506ECB937E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UDatasdk</RootNamespace>
+    <AssemblyName>UData</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseRet.cs" />
+    <Compile Include="CommonConst.cs" />
+    <Compile Include="CommonRet.cs" />
+    <Compile Include="commons\BaseService.cs" />
+    <Compile Include="commons\CommonService.cs" />
+    <Compile Include="commons\CoreComponent.cs" />
+    <Compile Include="commons\CoreComponentBase.cs" />
+    <Compile Include="commons\Device.cs" />
+    <Compile Include="commons\DictionaryBuilder.cs" />
+    <Compile Include="commons\Http.cs" />
+    <Compile Include="commons\HttpClient.cs" />
+    <Compile Include="commons\HttpHelper.cs" />
+    <Compile Include="commons\HttpMethod.cs" />
+    <Compile Include="commons\Loger.cs" />
+    <Compile Include="commons\Loom.cs" />
+    <Compile Include="commons\PostType.cs" />
+    <Compile Include="commons\Request.cs" />
+    <Compile Include="commons\Response.cs" />
+    <Compile Include="commons\TimeSynchronizer.cs" />
+    <Compile Include="commons\TrackEventService.cs" />
+    <Compile Include="commons\UDataConfig.cs" />
+    <Compile Include="commons\Utility.cs" />
+    <Compile Include="Event\UDatasdkEvent.cs" />
+    <Compile Include="InitDelegate.cs" />
+    <Compile Include="InitRet.cs" />
+    <Compile Include="IUDataSDK.cs" />
+    <Compile Include="LitJson\ArrayMetadata.cs" />
+    <Compile Include="LitJson\Condition.cs" />
+    <Compile Include="LitJson\ExporterFunc.2.cs" />
+    <Compile Include="LitJson\ExporterFunc.cs" />
+    <Compile Include="LitJson\FsmContext.cs" />
+    <Compile Include="LitJson\IJsonWrapper.cs" />
+    <Compile Include="LitJson\ImporterFunc.2.cs" />
+    <Compile Include="LitJson\ImporterFunc.cs" />
+    <Compile Include="LitJson\JsonData.cs" />
+    <Compile Include="LitJson\JsonException.cs" />
+    <Compile Include="LitJson\JsonMapper.cs" />
+    <Compile Include="LitJson\JsonMockWrapper.cs" />
+    <Compile Include="LitJson\JsonReader.cs" />
+    <Compile Include="LitJson\JsonToken.cs" />
+    <Compile Include="LitJson\JsonType.cs" />
+    <Compile Include="LitJson\JsonWriter.cs" />
+    <Compile Include="LitJson\Lexer.cs" />
+    <Compile Include="LitJson\ObjectMetadata.cs" />
+    <Compile Include="LitJson\OrderedDictionaryEnumerator.cs" />
+    <Compile Include="LitJson\ParserToken.cs" />
+    <Compile Include="LitJson\PropertyMetadata.cs" />
+    <Compile Include="LitJson\WrapperFactory.cs" />
+    <Compile Include="LitJson\WriterContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportEventDelegate.cs" />
+    <Compile Include="ReportEventRet.cs" />
+    <Compile Include="ResultCode.cs" />
+    <Compile Include="UDataConst.cs" />
+    <Compile Include="UDataDebug.cs" />
+    <Compile Include="UDataManager.cs" />
+    <Compile Include="UDataSDK.cs" />
+    <Compile Include="UDataSdkData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Il2CppDummyDll\Il2CppDummyDll.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c7}</Project>
+      <Name>Il2CppDummyDll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c9}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c9}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937d4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.CoreModule\UnityEngine.CoreModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937ec}</Project>
+      <Name>UnityEngine.CoreModule</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

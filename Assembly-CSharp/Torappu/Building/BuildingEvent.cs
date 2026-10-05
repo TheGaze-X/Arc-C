@@ -1,0 +1,107 @@
+﻿using System;
+using Il2CppDummyDll;
+
+namespace Torappu.Building
+{
+	// Token: 0x020017C1 RID: 6081
+	[Token(Token = "0x20017C1")]
+	public enum BuildingEvent
+	{
+		// Token: 0x04008FE2 RID: 36834
+		[Token(Token = "0x4008FE2")]
+		BUILDING_DATA_LOADED,
+		// Token: 0x04008FE3 RID: 36835
+		[Token(Token = "0x4008FE3")]
+		BUILDING_MODE_CHANGED,
+		// Token: 0x04008FE4 RID: 36836
+		[Token(Token = "0x4008FE4")]
+		VAULT_LAYOUT_UPDATE,
+		// Token: 0x04008FE5 RID: 36837
+		[Token(Token = "0x4008FE5")]
+		VAULT_ROOM_OBJ_CREATED,
+		// Token: 0x04008FE6 RID: 36838
+		[Token(Token = "0x4008FE6")]
+		VAULT_ROOM_OBJ_CHANGED,
+		// Token: 0x04008FE7 RID: 36839
+		[Token(Token = "0x4008FE7")]
+		VAULT_ROOM_OBJ_DESTROYED,
+		// Token: 0x04008FE8 RID: 36840
+		[Token(Token = "0x4008FE8")]
+		VAULT_ROOM_FURN_CREATED,
+		// Token: 0x04008FE9 RID: 36841
+		[Token(Token = "0x4008FE9")]
+		VAULT_FUNC_FURN_UPDATED,
+		// Token: 0x04008FEA RID: 36842
+		[Token(Token = "0x4008FEA")]
+		OPERATION_MODE_CHANGED,
+		// Token: 0x04008FEB RID: 36843
+		[Token(Token = "0x4008FEB")]
+		ROOM_SELECTED,
+		// Token: 0x04008FEC RID: 36844
+		[Token(Token = "0x4008FEC")]
+		ROOM_UNSELECTED,
+		// Token: 0x04008FED RID: 36845
+		[Token(Token = "0x4008FED")]
+		ROOM_ROUTE_FAIL,
+		// Token: 0x04008FEE RID: 36846
+		[Token(Token = "0x4008FEE")]
+		ROOM_REQUEST_CLEAN,
+		// Token: 0x04008FEF RID: 36847
+		[Token(Token = "0x4008FEF")]
+		ROOM_REQUEST_BUILD,
+		// Token: 0x04008FF0 RID: 36848
+		[Token(Token = "0x4008FF0")]
+		ROOM_REQUEST_LEVELUP,
+		// Token: 0x04008FF1 RID: 36849
+		[Token(Token = "0x4008FF1")]
+		ROOM_REQUEST_TEARDOWN,
+		// Token: 0x04008FF2 RID: 36850
+		[Token(Token = "0x4008FF2")]
+		ROOM_REQUEST_DIY,
+		// Token: 0x04008FF3 RID: 36851
+		[Token(Token = "0x4008FF3")]
+		ROOM_REQUEST_DIY_CANCEL,
+		// Token: 0x04008FF4 RID: 36852
+		[Token(Token = "0x4008FF4")]
+		ROOM_REQUEST_DIY_LEVELUP,
+		// Token: 0x04008FF5 RID: 36853
+		[Token(Token = "0x4008FF5")]
+		ROOM_REQUEST_DIY_LEVELUP_OK,
+		// Token: 0x04008FF6 RID: 36854
+		[Token(Token = "0x4008FF6")]
+		ROOM_REQUEST_DIY_LEVELUP_CANCEL,
+		// Token: 0x04008FF7 RID: 36855
+		[Token(Token = "0x4008FF7")]
+		ROOM_SHOW_DETAIL,
+		// Token: 0x04008FF8 RID: 36856
+		[Token(Token = "0x4008FF8")]
+		ROOM_BUILD_CHOICE_SELECTED,
+		// Token: 0x04008FF9 RID: 36857
+		[Token(Token = "0x4008FF9")]
+		BP_ROOM_SETTLE_REQUESTED,
+		// Token: 0x04008FFA RID: 36858
+		[Token(Token = "0x4008FFA")]
+		BP_HILIGHT_MASK_CLICKED,
+		// Token: 0x04008FFB RID: 36859
+		[Token(Token = "0x4008FFB")]
+		DIY_PAGE_SAVED_CHANGES,
+		// Token: 0x04008FFC RID: 36860
+		[Token(Token = "0x4008FFC")]
+		TODO_NOTIFY_STATE_CHANGED,
+		// Token: 0x04008FFD RID: 36861
+		[Token(Token = "0x4008FFD")]
+		LOCAL_TRACK_REFRESH,
+		// Token: 0x04008FFE RID: 36862
+		[Token(Token = "0x4008FFE")]
+		ROUTE_TO_CHAR_CTRL,
+		// Token: 0x04008FFF RID: 36863
+		[Token(Token = "0x4008FFF")]
+		FLOAT_STATE_UPDATE,
+		// Token: 0x04009000 RID: 36864
+		[Token(Token = "0x4009000")]
+		ON_MEETING_ROOM_FOCUSED_BY_SCENE_PARAM,
+		// Token: 0x04009001 RID: 36865
+		[Token(Token = "0x4009001")]
+		OBJECT_SELECTED
+	}
+}

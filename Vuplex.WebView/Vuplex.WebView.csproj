@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C4E1EA9-4601-42FA-9AEE-5506ECB9380E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Vuplex.WebView</RootNamespace>
+    <AssemblyName>Vuplex.WebView</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthRequestedEventArgs.cs" />
+    <Compile Include="BaseKeyboard.cs" />
+    <Compile Include="BaseWebViewPrefab.cs" />
+    <Compile Include="CanvasKeyboard.cs" />
+    <Compile Include="CanvasPointerInputDetector.cs" />
+    <Compile Include="CanvasWebViewPrefab.cs" />
+    <Compile Include="ChromiumLogLevel.cs" />
+    <Compile Include="ClickedEventArgs.cs" />
+    <Compile Include="ConsoleMessageEventArgs.cs" />
+    <Compile Include="ConsoleMessageLevel.cs" />
+    <Compile Include="Cookie.cs" />
+    <Compile Include="DefaultPointerInputDetector.cs" />
+    <Compile Include="DownloadChangedEventArgs.cs" />
+    <Compile Include="DragMode.cs" />
+    <Compile Include="EventArgs.cs" />
+    <Compile Include="FileSelectionEventArgs.cs" />
+    <Compile Include="FindResult.cs" />
+    <Compile Include="FocusedInputFieldChangedEventArgs.cs" />
+    <Compile Include="FocusedInputFieldType.cs" />
+    <Compile Include="ICookieManager.cs" />
+    <Compile Include="Internal\BaseWebView.cs" />
+    <Compile Include="Internal\BridgeMessage.cs" />
+    <Compile Include="Internal\CachingGetter.cs" />
+    <Compile Include="Internal\CanvasViewportMaterialView.cs" />
+    <Compile Include="Internal\CertificateRequestedMessage.cs" />
+    <Compile Include="Internal\ConsoleBridgeMessage.cs" />
+    <Compile Include="Internal\CursorHelper.cs" />
+    <Compile Include="Internal\DownloadMessage.cs" />
+    <Compile Include="Internal\FileSelectionMessage.cs" />
+    <Compile Include="Internal\IWebPlugin.cs" />
+    <Compile Include="Internal\JsonArrayWrapper.cs" />
+    <Compile Include="Internal\KeyboardEventArgs.cs" />
+    <Compile Include="Internal\KeyboardManager.cs" />
+    <Compile Include="Internal\KeyboardUI.cs" />
+    <Compile Include="Internal\LabelAttribute.cs" />
+    <Compile Include="Internal\MessageCertificate.cs" />
+    <Compile Include="Internal\MessageCertificatePrincipal.cs" />
+    <Compile Include="Internal\NativeKeyboardListener.cs" />
+    <Compile Include="Internal\StringBridgeMessage.cs" />
+    <Compile Include="Internal\StringWithIdBridgeMessage.cs" />
+    <Compile Include="Internal\ThreadDispatcher.cs" />
+    <Compile Include="Internal\ViewportMaterialView.cs" />
+    <Compile Include="Internal\VulkanDelayedTextureDestroyer.cs" />
+    <Compile Include="Internal\VXUnityVersion.cs" />
+    <Compile Include="Internal\VXUtils.cs" />
+    <Compile Include="Internal\WebPluginFactory.cs" />
+    <Compile Include="Internal\WebViewLogger.cs" />
+    <Compile Include="Internal\WindowsWebPluginRegistrant.cs" />
+    <Compile Include="IPointerInputDetector.cs" />
+    <Compile Include="IWebView.cs" />
+    <Compile Include="IWithAuth.cs" />
+    <Compile Include="IWithChangingTexture.cs" />
+    <Compile Include="IWithCursorType.cs" />
+    <Compile Include="IWithDeepLinking.cs" />
+    <Compile Include="IWithDownloads.cs" />
+    <Compile Include="IWithFallbackTextureData.cs" />
+    <Compile Include="IWithFallbackVideo.cs" />
+    <Compile Include="IWithFileSelection.cs" />
+    <Compile Include="IWithFind.cs" />
+    <Compile Include="IWithHttpAuth.cs" />
+    <Compile Include="IWithIme.cs" />
+    <Compile Include="IWithKeyDownAndUp.cs" />
+    <Compile Include="IWithMovablePointer.cs" />
+    <Compile Include="IWithMutableAudio.cs" />
+    <Compile Include="IWithNative2DMode.cs" />
+    <Compile Include="IWithNativeJavaScriptDialogs.cs" />
+    <Compile Include="IWithNativeOnScreenKeyboard.cs" />
+    <Compile Include="IWithPdfCreation.cs" />
+    <Compile Include="IWithPixelDensity.cs" />
+    <Compile Include="IWithPointerDownAndUp.cs" />
+    <Compile Include="IWithPopups.cs" />
+    <Compile Include="IWithSettableUserAgent.cs" />
+    <Compile Include="IWithTouch.cs" />
+    <Compile Include="Keyboard.cs" />
+    <Compile Include="KeyModifier.cs" />
+    <Compile Include="LoadFailedEventArgs.cs" />
+    <Compile Include="MockCookieManager.cs" />
+    <Compile Include="MockWebPlugin.cs" />
+    <Compile Include="MockWebView.cs" />
+    <Compile Include="MouseButton.cs" />
+    <Compile Include="ObsoletionMessages.cs" />
+    <Compile Include="PageLoadFailedException.cs" />
+    <Compile Include="PointerEventArgs.cs" />
+    <Compile Include="PointerOptions.cs" />
+    <Compile Include="PopupMode.cs" />
+    <Compile Include="PopupRequestedEventArgs.cs" />
+    <Compile Include="ProgressChangedEventArgs.cs" />
+    <Compile Include="ProgressChangeType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptDialogEventArgs.2.cs" />
+    <Compile Include="ScriptDialogEventArgs.cs" />
+    <Compile Include="ScrolledEventArgs.cs" />
+    <Compile Include="StandaloneClientCertificateRequestedEventArgs.cs" />
+    <Compile Include="StandaloneCookieManager.cs" />
+    <Compile Include="StandalonePdfMarginType.cs" />
+    <Compile Include="StandalonePdfOptions.cs" />
+    <Compile Include="StandaloneWebPlugin.cs" />
+    <Compile Include="StandaloneWebView.cs" />
+    <Compile Include="StandaloneX509Certificate.cs" />
+    <Compile Include="StandaloneX509CertificatePrincipal.cs" />
+    <Compile Include="TerminatedEventArgs.cs" />
+    <Compile Include="TerminationType.cs" />
+    <Compile Include="TouchEvent.cs" />
+    <Compile Include="TouchEventType.cs" />
+    <Compile Include="TrialExpiredException.cs" />
+    <Compile Include="UrlActionType.cs" />
+    <Compile Include="UrlChangedEventArgs.cs" />
+    <Compile Include="Web.cs" />
+    <Compile Include="WebPluginType.cs" />
+    <Compile Include="WebViewOptions.cs" />
+    <Compile Include="WebViewPrefab.cs" />
+    <Compile Include="WebViewUnavailableException.cs" />
+    <Compile Include="WindowsWebPlugin.cs" />
+    <Compile Include="WindowsWebView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Il2CppDummyDll\Il2CppDummyDll.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c7}</Project>
+      <Name>Il2CppDummyDll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c9}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c9}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937d3}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937d4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.CoreModule\UnityEngine.CoreModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937ec}</Project>
+      <Name>UnityEngine.CoreModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.PhysicsModule\UnityEngine.PhysicsModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937f7}</Project>
+      <Name>UnityEngine.PhysicsModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.UIModule\UnityEngine.UIModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb93804}</Project>
+      <Name>UnityEngine.UIModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.UI\UnityEngine.UI.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb93801}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

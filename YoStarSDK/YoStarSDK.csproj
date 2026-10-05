@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C4E1EA9-4601-42FA-9AEE-5506ECB93811}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>YoStarSDK</RootNamespace>
+    <AssemblyName>YoStarSDK</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AliyunSLS\AliyunLogSDK.cs" />
+    <Compile Include="AliyunSLS\callback_delegate.cs" />
+    <Compile Include="AliyunSLS\callback_response.cs" />
+    <Compile Include="AliyunSLS\complete_callback.cs" />
+    <Compile Include="AliyunSLS\Credentials.cs" />
+    <Compile Include="AliyunSLS\DnsRequest.cs" />
+    <Compile Include="AliyunSLS\HttpRequest.cs" />
+    <Compile Include="AliyunSLS\LogResult.cs" />
+    <Compile Include="AliyunSLS\log_callback.cs" />
+    <Compile Include="AliyunSLS\MonoPInvokeCallbackAttribute.cs" />
+    <Compile Include="AliyunSLS\MtrRequest.cs" />
+    <Compile Include="AliyunSLS\PingRequest.cs" />
+    <Compile Include="AliyunSLS\Platform.cs" />
+    <Compile Include="AliyunSLS\PlayModeHelper.cs" />
+    <Compile Include="AliyunSLS\ReqType.cs" />
+    <Compile Include="AliyunSLS\Request.cs" />
+    <Compile Include="AliyunSLS\Response.cs" />
+    <Compile Include="AliyunSLS\SLSLogLevel.cs" />
+    <Compile Include="AliyunSLS\TcpPingRequest.cs" />
+    <Compile Include="AliyunSLS\TCPServer.cs" />
+    <Compile Include="AliyunSLS\UdpRequest.cs" />
+    <Compile Include="AliyunSLS\Unity4SLS.cs" />
+    <Compile Include="AliyunSLS\UserInfo.cs" />
+    <Compile Include="AliyunSLS\WindowsImpl.cs" />
+    <Compile Include="Assets\AiriSDK\API\Source\Steam\pay\PurchaseTask.cs" />
+    <Compile Include="Assets\AiriSDK\API\Source\Steam\pay\SteamPayResponse.cs" />
+    <Compile Include="Assets\AiriSDK\API\Source\Steam\pay\SteamTimeoutHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SteamManager.cs" />
+    <Compile Include="UI\Tables\TableCell.cs" />
+    <Compile Include="UI\Tables\TableLayout.cs" />
+    <Compile Include="UI\Tables\TableLayoutUtilities.cs" />
+    <Compile Include="UI\Tables\TableRow.cs" />
+    <Compile Include="YoStar\SDK\Agreement.cs" />
+    <Compile Include="YoStar\SDK\AgreementSingleMethod.cs" />
+    <Compile Include="YoStar\SDK\Ali.cs" />
+    <Compile Include="YoStar\SDK\AliHelper\AliLogHelper.cs" />
+    <Compile Include="YoStar\SDK\AliHelper\AliNetHelper.cs" />
+    <Compile Include="YoStar\SDK\AreaServer.cs" />
+    <Compile Include="YoStar\SDK\Auto_Url.cs" />
+    <Compile Include="YoStar\SDK\Bean\Aliyun.cs" />
+    <Compile Include="YoStar\SDK\Bean\AmazonLoginPlatformHandler.cs" />
+    <Compile Include="YoStar\SDK\Bean\AppleLoginPlatformHandler.cs" />
+    <Compile Include="YoStar\SDK\Bean\CreditCardData.cs" />
+    <Compile Include="YoStar\SDK\Bean\DeviceLoginPlatformHandler.cs" />
+    <Compile Include="YoStar\SDK\Bean\EmailLoginPlatformHandler.cs" />
+    <Compile Include="YoStar\SDK\Bean\EventManager.cs" />
+    <Compile Include="YoStar\SDK\Bean\FacebookLoginPlatformHandler.cs" />
+    <Compile Include="YoStar\SDK\Bean\GmoOrderCreate.cs" />
+    <Compile Include="YoStar\SDK\Bean\GoogleLoginPlatformHandler.cs" />
+    <Compile Include="YoStar\SDK\Bean\LoginPlatformFactory.cs" />
+    <Compile Include="YoStar\SDK\Bean\LoginPlatformHandler.cs" />
+    <Compile Include="YoStar\SDK\Bean\ManageDevicesItem.cs" />
+    <Compile Include="YoStar\SDK\Bean\MigrationLoginPlatformHandler.cs" />
+    <Compile Include="YoStar\SDK\Bean\OrderDetailBeen.cs" />
+    <Compile Include="YoStar\SDK\Bean\SteamLoginPlatformHandler.cs" />
+    <Compile Include="YoStar\SDK\Bean\TwitterLoginPlatformHandler.cs" />
+    <Compile Include="YoStar\SDK\Bean\UnknownLoginPlatformHandler.cs" />
+    <Compile Include="YoStar\SDK\Bean\YoStarPassLoginPlatformHandler.cs" />
+    <Compile Include="YoStar\SDK\BuildLocalNotificationDelegate.cs" />
+    <Compile Include="YoStar\SDK\ClearRet.cs" />
+    <Compile Include="YoStar\SDK\ClearSdkCacheDelegate.cs" />
+    <Compile Include="YoStar\SDK\CommonViewConfig.cs" />
+    <Compile Include="YoStar\SDK\Component\AccountComponent.cs" />
+    <Compile Include="YoStar\SDK\Component\BaseComponent.cs" />
+    <Compile Include="YoStar\SDK\Component\CoreComponent.cs" />
+    <Compile Include="YoStar\SDK\Component\EmailComponent.cs" />
+    <Compile Include="YoStar\SDK\Component\GoogleComponent.cs" />
+    <Compile Include="YoStar\SDK\Component\InitComponent.cs" />
+    <Compile Include="YoStar\SDK\Component\LoginComponent.cs" />
+    <Compile Include="YoStar\SDK\Component\OtherComponent.cs" />
+    <Compile Include="YoStar\SDK\Component\PayComponent.cs" />
+    <Compile Include="YoStar\SDK\Component\SDKWebviewComponent.cs" />
+    <Compile Include="YoStar\SDK\Component\SteamComponent.cs" />
+    <Compile Include="YoStar\SDK\Component\SteamLinkComponent.cs" />
+    <Compile Include="YoStar\SDK\Component\SteamLoginComponent.cs" />
+    <Compile Include="YoStar\SDK\Component\SteamPayComponent.cs" />
+    <Compile Include="YoStar\SDK\Component\SteamUnlinkComponent.cs" />
+    <Compile Include="YoStar\SDK\Component\ThirdAccountComponent.cs" />
+    <Compile Include="YoStar\SDK\Component\UserComponent.cs" />
+    <Compile Include="YoStar\SDK\Constant\BaseRet.cs" />
+    <Compile Include="YoStar\SDK\Constant\DeleteViewType.cs" />
+    <Compile Include="YoStar\SDK\Constant\ModifiedEmail.cs" />
+    <Compile Include="YoStar\SDK\Constant\RebornRet.cs" />
+    <Compile Include="YoStar\SDK\Constant\SDKConst.cs" />
+    <Compile Include="YoStar\SDK\Constant\SDKErrorCode.cs" />
+    <Compile Include="YoStar\SDK\Constant\SDKGlobalConstants.cs" />
+    <Compile Include="YoStar\SDK\Constant\SDKLocalKey.cs" />
+    <Compile Include="YoStar\SDK\Constant\SDKStoreKeyConstants.cs" />
+    <Compile Include="YoStar\SDK\CustomButton.cs" />
+    <Compile Include="YoStar\SDK\DeleteAccountDelegate.cs" />
+    <Compile Include="YoStar\SDK\DeleteAccountRet.cs" />
+    <Compile Include="YoStar\SDK\DeviceTrackingIDDelegate.cs" />
+    <Compile Include="YoStar\SDK\DeviceTrackingIDRet.cs" />
+    <Compile Include="YoStar\SDK\Extension\AsyncOperationExtensions.cs" />
+    <Compile Include="YoStar\SDK\Extension\CollectionExtensions.cs" />
+    <Compile Include="YoStar\SDK\Extension\DictionaryExtensions.cs" />
+    <Compile Include="YoStar\SDK\Extension\EnumExtensions.cs" />
+    <Compile Include="YoStar\SDK\Extension\StackExtensions.cs" />
+    <Compile Include="YoStar\SDK\Extension\StringExtensions.cs" />
+    <Compile Include="YoStar\SDK\Extension\UIManagerExtension.cs" />
+    <Compile Include="YoStar\SDK\GMOPayMethod.cs" />
+    <Compile Include="YoStar\SDK\GMOPayMethodExtensions.cs" />
+    <Compile Include="YoStar\SDK\Help\CursorInputScript.cs" />
+    <Compile Include="YoStar\SDK\Help\CursorPointScript.cs" />
+    <Compile Include="YoStar\SDK\Help\CursorType.cs" />
+    <Compile Include="YoStar\SDK\Help\GeeTestHelper.cs" />
+    <Compile Include="YoStar\SDK\Help\GoogleHelper.cs" />
+    <Compile Include="YoStar\SDK\Help\PCEventHelper.cs" />
+    <Compile Include="YoStar\SDK\Help\PCEventName.cs" />
+    <Compile Include="YoStar\SDK\Help\SteamHelper.cs" />
+    <Compile Include="YoStar\SDK\Help\ThirdAccountAuth.cs" />
+    <Compile Include="YoStar\SDK\Help\WebPayHelper.cs" />
+    <Compile Include="YoStar\SDK\Help\YoCursorHelper.cs" />
+    <Compile Include="YoStar\SDK\Help\YoViewConfigHelper.cs" />
+    <Compile Include="YoStar\SDK\Init.cs" />
+    <Compile Include="YoStar\SDK\InitDelegate.cs" />
+    <Compile Include="YoStar\SDK\InitRet.cs" />
+    <Compile Include="YoStar\SDK\Internet_Detection.cs" />
+    <Compile Include="YoStar\SDK\IViewService.cs" />
+    <Compile Include="YoStar\SDK\IYoSDK.cs" />
+    <Compile Include="YoStar\SDK\LinkPlatform.cs" />
+    <Compile Include="YoStar\SDK\LinkRet.cs" />
+    <Compile Include="YoStar\SDK\LitJson\ArrayMetadata.cs" />
+    <Compile Include="YoStar\SDK\LitJson\Condition.cs" />
+    <Compile Include="YoStar\SDK\LitJson\ExporterFunc.2.cs" />
+    <Compile Include="YoStar\SDK\LitJson\ExporterFunc.cs" />
+    <Compile Include="YoStar\SDK\LitJson\FsmContext.cs" />
+    <Compile Include="YoStar\SDK\LitJson\IJsonWrapper.cs" />
+    <Compile Include="YoStar\SDK\LitJson\ImporterFunc.2.cs" />
+    <Compile Include="YoStar\SDK\LitJson\ImporterFunc.cs" />
+    <Compile Include="YoStar\SDK\LitJson\JsonData.cs" />
+    <Compile Include="YoStar\SDK\LitJson\JsonException.cs" />
+    <Compile Include="YoStar\SDK\LitJson\JsonMapper.cs" />
+    <Compile Include="YoStar\SDK\LitJson\JsonMockWrapper.cs" />
+    <Compile Include="YoStar\SDK\LitJson\JsonReader.cs" />
+    <Compile Include="YoStar\SDK\LitJson\JsonToken.cs" />
+    <Compile Include="YoStar\SDK\LitJson\JsonType.cs" />
+    <Compile Include="YoStar\SDK\LitJson\JsonWriter.cs" />
+    <Compile Include="YoStar\SDK\LitJson\Lexer.cs" />
+    <Compile Include="YoStar\SDK\LitJson\ObjectMetadata.cs" />
+    <Compile Include="YoStar\SDK\LitJson\OrderedDictionaryEnumerator.cs" />
+    <Compile Include="YoStar\SDK\LitJson\ParserToken.cs" />
+    <Compile Include="YoStar\SDK\LitJson\PropertyMetadata.cs" />
+    <Compile Include="YoStar\SDK\LitJson\WrapperFactory.cs" />
+    <Compile Include="YoStar\SDK\LitJson\WriterContext.cs" />
+    <Compile Include="YoStar\SDK\LocNotificationRet.cs" />
+    <Compile Include="YoStar\SDK\Log.cs" />
+    <Compile Include="YoStar\SDK\Loger.cs" />
+    <Compile Include="YoStar\SDK\LoginDelegate.cs" />
+    <Compile Include="YoStar\SDK\LoginPlatform.cs" />
+    <Compile Include="YoStar\SDK\LoginRet.cs" />
+    <Compile Include="YoStar\SDK\LogoutDelegate.cs" />
+    <Compile Include="YoStar\SDK\LogoutRet.cs" />
+    <Compile Include="YoStar\SDK\Loom.cs" />
+    <Compile Include="YoStar\SDK\MonoStub.cs" />
+    <Compile Include="YoStar\SDK\Net\ApiConstants.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\ACCOUNT_RETRIEVAL.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\AgreementEntity.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\AgreementItem.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\AiHelp.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\AppConfig.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\Auto.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\CaptureScreen.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\ClientLogReporting.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\Datum.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\Destroy.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\DetectionAddress.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\EnablePay.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\GmoPayChannel.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\GuidePopup.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\Item.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\Key.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\KmcInfo.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\Login.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\LoginEntity.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\LoginReq.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\LoginYostar.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\Popup.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\ProductionEntity.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\RechargeLimit.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\RechargeLimitItem.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\SettingEntity.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\Share.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\ShareItem.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\Sls.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\StoreConfig.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\Udata.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\UserDetailEntity.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\UserInfo.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\Yostar.cs" />
+    <Compile Include="YoStar\SDK\Net\Bean\YostarLoginFrom.cs" />
+    <Compile Include="YoStar\SDK\Net\HttpClient.cs" />
+    <Compile Include="YoStar\SDK\Net\Request.cs" />
+    <Compile Include="YoStar\SDK\Net\Response.cs" />
+    <Compile Include="YoStar\SDK\Net\ResponseResult.cs" />
+    <Compile Include="YoStar\SDK\Net\RetryManage.cs" />
+    <Compile Include="YoStar\SDK\Net\SignUtil.cs" />
+    <Compile Include="YoStar\SDK\OpenType.cs" />
+    <Compile Include="YoStar\SDK\Orientation.cs" />
+    <Compile Include="YoStar\SDK\PayDelegate.cs" />
+    <Compile Include="YoStar\SDK\PaymentMode.cs" />
+    <Compile Include="YoStar\SDK\PayRet.cs" />
+    <Compile Include="YoStar\SDK\PayStore.cs" />
+    <Compile Include="YoStar\SDK\PayType.cs" />
+    <Compile Include="YoStar\SDK\PCSDK.cs" />
+    <Compile Include="YoStar\SDK\Plist.cs" />
+    <Compile Include="YoStar\SDK\PushMsgReceiveDelegate.cs" />
+    <Compile Include="YoStar\SDK\PushMsgReceiveRet.cs" />
+    <Compile Include="YoStar\SDK\QuerySkuDetailsDelegate.cs" />
+    <Compile Include="YoStar\SDK\QueryTextLegalityDelegate.cs" />
+    <Compile Include="YoStar\SDK\QueryTextLegalityRet.cs" />
+    <Compile Include="YoStar\SDK\Regions.cs" />
+    <Compile Include="YoStar\SDK\ResultCode.cs" />
+    <Compile Include="YoStar\SDK\SameColorButon.cs" />
+    <Compile Include="YoStar\SDK\SDKConfigJsonData.cs" />
+    <Compile Include="YoStar\SDK\Server.cs" />
+    <Compile Include="YoStar\SDK\ServiceType.cs" />
+    <Compile Include="YoStar\SDK\Service\AccountService.cs" />
+    <Compile Include="YoStar\SDK\Service\BaseService.cs" />
+    <Compile Include="YoStar\SDK\Service\CoreService.cs" />
+    <Compile Include="YoStar\SDK\Service\InitService.cs" />
+    <Compile Include="YoStar\SDK\Service\LoginService.cs" />
+    <Compile Include="YoStar\SDK\Service\OtherService.cs" />
+    <Compile Include="YoStar\SDK\Service\PayService.cs" />
+    <Compile Include="YoStar\SDK\Service\UserService.cs" />
+    <Compile Include="YoStar\SDK\SetBirthdayDelegate.cs" />
+    <Compile Include="YoStar\SDK\SetBirthdayRet.cs" />
+    <Compile Include="YoStar\SDK\ShareContent.cs" />
+    <Compile Include="YoStar\SDK\ShareImage.cs" />
+    <Compile Include="YoStar\SDK\ShareUrl.cs" />
+    <Compile Include="YoStar\SDK\SKU.cs" />
+    <Compile Include="YoStar\SDK\SkuDetailRet.cs" />
+    <Compile Include="YoStar\SDK\SteamSDK.cs" />
+    <Compile Include="YoStar\SDK\SurveyRet.cs" />
+    <Compile Include="YoStar\SDK\SwitchServerDelegate.cs" />
+    <Compile Include="YoStar\SDK\SwitchServerRet.cs" />
+    <Compile Include="YoStar\SDK\SystemShareDelegate.cs" />
+    <Compile Include="YoStar\SDK\SystemShareRet.cs" />
+    <Compile Include="YoStar\SDK\ThirdAuthRet.cs" />
+    <Compile Include="YoStar\SDK\TwViewConfig.cs" />
+    <Compile Include="YoStar\SDK\UIAnimator.cs" />
+    <Compile Include="YoStar\SDK\UIAppearDelegate.cs" />
+    <Compile Include="YoStar\SDK\UICloseDelegate.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\AnimationEventSender.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\ArgumentType.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\ArgumentVariable.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\CallbackEventData.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\CallbackHandler.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\CoroutineHandler.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\CoroutineQueue.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\EasingEquations.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\EventHandler.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\FloatTween.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\ITweenValue.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\NetStatusIndicator.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\PlayerInfo.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\PropertyBinding.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\SaveUIComponent.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\TweenRunner.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\UIWidget.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\UIWidgetUtility.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\UnityTools.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\Utility.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\Vector3Tween.cs" />
+    <Compile Include="YoStar\SDK\UIWidgets\WindowsRuntimeExtension.cs" />
+    <Compile Include="YoStar\SDK\UI\AccountHistoryItem.cs" />
+    <Compile Include="YoStar\SDK\UI\AccountHistoryPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\ActionType.cs" />
+    <Compile Include="YoStar\SDK\UI\AgeSelectorConfig.cs" />
+    <Compile Include="YoStar\SDK\UI\AgeSelectorPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\AgreementTypeItemPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\BasePanel.cs" />
+    <Compile Include="YoStar\SDK\UI\BindAccountItem.cs" />
+    <Compile Include="YoStar\SDK\UI\BindAccountPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\ChangeBoundMailboxPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\CommonPopPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\ConfirmAgreementPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\ConfirmSinglePanel.cs" />
+    <Compile Include="YoStar\SDK\UI\CreateTranscodePanel.cs" />
+    <Compile Include="YoStar\SDK\UI\CreditCardPayPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\CustomEventSystemScript.cs" />
+    <Compile Include="YoStar\SDK\UI\CustomTextColor.cs" />
+    <Compile Include="YoStar\SDK\UI\CustomUIUtils.cs" />
+    <Compile Include="YoStar\SDK\UI\DeleteAccountChoicePanel.cs" />
+    <Compile Include="YoStar\SDK\UI\DeleteAccountPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\EmailInputPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\EmailListItem.cs" />
+    <Compile Include="YoStar\SDK\UI\EmailLoginPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\GuestLoginPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\InitFiledPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\InputFieldFocusDetector.cs" />
+    <Compile Include="YoStar\SDK\UI\JsonDataExtensions.cs" />
+    <Compile Include="YoStar\SDK\UI\LimitedLinesText.cs" />
+    <Compile Include="YoStar\SDK\UI\LoadingManager.cs" />
+    <Compile Include="YoStar\SDK\UI\LoadingPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\LoginBindPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\LoginStylePanel.cs" />
+    <Compile Include="YoStar\SDK\UI\ManageDevicesPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\MouseHover.cs" />
+    <Compile Include="YoStar\SDK\UI\NDKey.cs" />
+    <Compile Include="YoStar\SDK\UI\NetStatusConstants.cs" />
+    <Compile Include="YoStar\SDK\UI\NetStatusIndicatorPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\NetStatusItem.cs" />
+    <Compile Include="YoStar\SDK\UI\NetStatusItemUtility.cs" />
+    <Compile Include="YoStar\SDK\UI\NetworkType.cs" />
+    <Compile Include="YoStar\SDK\UI\NoticeConfig.cs" />
+    <Compile Include="YoStar\SDK\UI\NoticePanel.cs" />
+    <Compile Include="YoStar\SDK\UI\PassPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\PassType.cs" />
+    <Compile Include="YoStar\SDK\UI\PayPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\PingType.cs" />
+    <Compile Include="YoStar\SDK\UI\ReadAgreement.cs" />
+    <Compile Include="YoStar\SDK\UI\SDKViewStateManager.cs" />
+    <Compile Include="YoStar\SDK\UI\SDKWebview.cs" />
+    <Compile Include="YoStar\SDK\UI\SetBirthKrPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\SharePanel.cs" />
+    <Compile Include="YoStar\SDK\UI\SwitchAccountPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\TextEllipsis.cs" />
+    <Compile Include="YoStar\SDK\UI\ToastPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\TranscodeLoginPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\UIManager.cs" />
+    <Compile Include="YoStar\SDK\UI\UIPanelTypeConstants.cs" />
+    <Compile Include="YoStar\SDK\UI\UserCenterActionItemScript.cs" />
+    <Compile Include="YoStar\SDK\UI\UserCenterHeaderItemScript.cs" />
+    <Compile Include="YoStar\SDK\UI\UserCenterObject.cs" />
+    <Compile Include="YoStar\SDK\UI\UserCenterPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\WarnPopPanel.cs" />
+    <Compile Include="YoStar\SDK\UI\WelcomeLoginPanel.cs" />
+    <Compile Include="YoStar\SDK\UniversalLinkDelegate.cs" />
+    <Compile Include="YoStar\SDK\UniversalLinkRet.cs" />
+    <Compile Include="YoStar\SDK\UnLinkRet.cs" />
+    <Compile Include="YoStar\SDK\UserSurveyDelegate.cs" />
+    <Compile Include="YoStar\SDK\Util\AppUtils.cs" />
+    <Compile Include="YoStar\SDK\Util\CallbackGlobal.2.cs" />
+    <Compile Include="YoStar\SDK\Util\CallbackGlobal.3.cs" />
+    <Compile Include="YoStar\SDK\Util\CallbackGlobal.cs" />
+    <Compile Include="YoStar\SDK\Util\ColorUtils.cs" />
+    <Compile Include="YoStar\SDK\Util\CommonUtils.cs" />
+    <Compile Include="YoStar\SDK\Util\DateUtils.cs" />
+    <Compile Include="YoStar\SDK\Util\EnDecrypt.cs" />
+    <Compile Include="YoStar\SDK\Util\EnumUtil.cs" />
+    <Compile Include="YoStar\SDK\Util\LocalizationUtils.cs" />
+    <Compile Include="YoStar\SDK\Util\LoginLogic.cs" />
+    <Compile Include="YoStar\SDK\Util\LogStorage.cs" />
+    <Compile Include="YoStar\SDK\Util\PCUtility.cs" />
+    <Compile Include="YoStar\SDK\Util\PersistentDataUtil.cs" />
+    <Compile Include="YoStar\SDK\Util\RealNameAuthUtils.cs" />
+    <Compile Include="YoStar\SDK\Util\ResourcesHelper.cs" />
+    <Compile Include="YoStar\SDK\Util\ResourceUtils.cs" />
+    <Compile Include="YoStar\SDK\Util\RSAUtils.cs" />
+    <Compile Include="YoStar\SDK\Util\SDKBusinessUtils.cs" />
+    <Compile Include="YoStar\SDK\Util\SystemUtils.cs" />
+    <Compile Include="YoStar\SDK\Util\WebViewUtils.cs" />
+    <Compile Include="YoStar\SDK\Util\YoStarCallbackUtils.cs" />
+    <Compile Include="YoStar\SDK\View\ButtonDarkStatus.cs" />
+    <Compile Include="YoStar\SDK\View\ButtonHoverEffect.cs" />
+    <Compile Include="YoStar\SDK\View\CreditCardListController.cs" />
+    <Compile Include="YoStar\SDK\View\CustomHeaderScript.cs" />
+    <Compile Include="YoStar\SDK\View\DarkButtonScript.cs" />
+    <Compile Include="YoStar\SDK\View\DatePicker.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\Animation.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\AnimationType.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePickerAnimationConfig.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePickerBorderConfig.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePickerButtonType.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePickerCache.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePickerConfig.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePickerEvent.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePickerEventConfig.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePickerTimer.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePickerTimerComponent.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePickerUtilities.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePicker_Animator.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePicker_Button.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePicker_Button_Pool.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePicker_Button_Pool_List.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePicker_Button_Pool_List_Item.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePicker_ContentLayout.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePicker_Header.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DatePicker_HoldButton.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DelayedAction.cs" />
+    <Compile Include="YoStar\SDK\View\Dates\DelayedEditorAction.cs" />
+    <Compile Include="YoStar\SDK\View\FillCreditCardContent.cs" />
+    <Compile Include="YoStar\SDK\View\HyperlinkText.cs" />
+    <Compile Include="YoStar\SDK\View\InputFeildScript.cs" />
+    <Compile Include="YoStar\SDK\View\LightButtonScript.cs" />
+    <Compile Include="YoStar\SDK\View\YMDDropdown.cs" />
+    <Compile Include="YoStar\SDK\View\YoCursorScript.cs" />
+    <Compile Include="YoStar\SDK\View\YoCursorScriptCell.cs" />
+    <Compile Include="YoStar\SDK\View\YoHeightScript.cs" />
+    <Compile Include="YoStar\SDK\View\YoTextFiledScript.cs" />
+    <Compile Include="YoStar\SDK\YoSDKAndroid.cs" />
+    <Compile Include="YoStar\SDK\YoSDKCallBack.cs" />
+    <Compile Include="YoStar\SDK\YoSDKData.cs" />
+    <Compile Include="YoStar\SDK\YoSDKEditor.cs" />
+    <Compile Include="YoStar\SDK\YoSDKIOS.cs" />
+    <Compile Include="YoStar\SDK\YoSDKStandalone.cs" />
+    <Compile Include="YoStar\SDK\YoSDKUnity.cs" />
+    <Compile Include="YoStar\SDK\YoStarSDKEvent.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Il2CppDummyDll\Il2CppDummyDll.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c7}</Project>
+      <Name>Il2CppDummyDll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c9}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937c9}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Newtonsoft.Json\Newtonsoft.Json.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937ca}</Project>
+      <Name>Newtonsoft.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Steamworks.NET\Steamworks.NET.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937d1}</Project>
+      <Name>Steamworks.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937d4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UData\UData.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937e0}</Project>
+      <Name>UData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.AndroidJNIModule\UnityEngine.AndroidJNIModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937e8}</Project>
+      <Name>UnityEngine.AndroidJNIModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.AnimationModule\UnityEngine.AnimationModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937e9}</Project>
+      <Name>UnityEngine.AnimationModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.AudioModule\UnityEngine.AudioModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937eb}</Project>
+      <Name>UnityEngine.AudioModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.CoreModule\UnityEngine.CoreModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937ec}</Project>
+      <Name>UnityEngine.CoreModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.Physics2DModule\UnityEngine.Physics2DModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937f6}</Project>
+      <Name>UnityEngine.Physics2DModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.PhysicsModule\UnityEngine.PhysicsModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb937f7}</Project>
+      <Name>UnityEngine.PhysicsModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.UIModule\UnityEngine.UIModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb93804}</Project>
+      <Name>UnityEngine.UIModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.UI\UnityEngine.UI.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb93801}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine.UnityWebRequestModule\UnityEngine.UnityWebRequestModule.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb93806}</Project>
+      <Name>UnityEngine.UnityWebRequestModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vuplex.WebView\Vuplex.WebView.csproj">
+      <Project>{1c4e1ea9-4601-42fa-9aee-5506ecb9380e}</Project>
+      <Name>Vuplex.WebView</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

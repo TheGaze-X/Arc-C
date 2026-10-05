@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using Il2CppDummyDll;
+
+namespace Torappu
+{
+	// Token: 0x020006C4 RID: 1732
+	[Token(Token = "0x20006C4")]
+	public class GetSpCharMissionRewardResponse : PlayerDeltaResponse
+	{
+		// Token: 0x0600630D RID: 25357 RVA: 0x00002053 File Offset: 0x00000253
+		[Token(Token = "0x600630D")]
+		[Address(RVA = "0x1022FA0", Offset = "0x1021BA0", VA = "0x181022FA0")]
+		public GetSpCharMissionRewardResponse()
+		{
+		}
+
+		// Token: 0x04002EB5 RID: 11957
+		[Token(Token = "0x4002EB5")]
+		[FieldOffset(Offset = "0x28")]
+		public List<ItemGet> items;
+	}
+}
